@@ -2,15 +2,19 @@ import React from "react";
 import "./styles.css";
 import Landing from "./components/Landing";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import Navbar_Portfolio from "./components/Navbar_Portfolio";
+import Topbar from "./components/Topbar";
+import TechStack from "./components/TechStack";
+import Projects from "./components/Projects";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Navbar_Portfolio />
-          <Route exact path="/" component={Landing} />
+          <Topbar />
+          <Route path="/" component={Landing} />
+          <Route path="/techstack" component={TechStack} />
+          <Route path="/projects" component={Projects} />
         </Switch>
       </Router>
     </div>
