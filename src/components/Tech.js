@@ -1,6 +1,6 @@
 import React from "react";
 
-class TechStack extends React.Component {
+class Tech extends React.Component {
   render() {
     return (
       <>
@@ -10,4 +10,4 @@ class TechStack extends React.Component {
   }
 }
 
-export default TechStack;
+export default Tech;

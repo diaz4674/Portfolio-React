@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
@@ -21,9 +21,9 @@ const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+    <BrowserRouter>
       <Route path="/" component={App} />
-    </Router>
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 );

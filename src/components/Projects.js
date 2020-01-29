@@ -1,10 +1,10 @@
 import React from "react";
 
 class Projects extends React.Component {
-  redner() {
+  render() {
     return (
       <>
-        <h1> Projects </h1>
+        <h1> pp </h1>
       </>
     );
   }
