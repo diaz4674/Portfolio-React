@@ -1,17 +1,18 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class Topbar extends React.Component {
   render() {
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="/">Miguel Diaz</Navbar.Brand>
+        <Navbar.Brand to="/">Miguel Diaz</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">About Me</Nav.Link>
-            <Nav.Link href="/techstack">Tech Stack</Nav.Link>
-            <Nav.Link href="/projects">Projects</Nav.Link>
+            <Link to="/">About Me</Link>
+            <Link to="/techstack">Tech Stack</Link>
+            <Link to="/projects">Projects</Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
