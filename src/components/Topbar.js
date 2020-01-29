@@ -1,6 +1,11 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
+const normalText = {
+  textDecoration: "none",
+  color: "white"
+};
 class Topbar extends React.Component {
   render() {
     return (
@@ -9,15 +14,15 @@ class Topbar extends React.Component {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">
-              <Link to="/">About Me </Link>{" "}
-            </Nav.Link>
-            <Nav.Link href="/techstack">
-              <Link to="/techstack">Tech </Link>{" "}
-            </Nav.Link>
-            <Nav.Link href="/projects">
-              <Link to="/projects">Projects </Link>{" "}
-            </Nav.Link>
+            <Link style={normalText} to="/">
+              <Nav.Link href="/">About Me</Nav.Link>
+            </Link>{" "}
+            <Link style={normalText} to="/techstack">
+              <Nav.Link href="/techstack">Skills</Nav.Link>
+            </Link>{" "}
+            <Link style={normalText} to="/projects">
+              <Nav.Link href="/projects">Projects</Nav.Link>
+            </Link>{" "}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
