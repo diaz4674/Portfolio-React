@@ -3,24 +3,34 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const normalText = {
-  textDecoration: "none",
   color: "white"
 };
+const noUnderline = {
+  textDecoration: "none",
+  fontFamily: "Bangers",
+  fontSize: "20px"
+};
+const Gray = {
+  backgroundColor: "#bbbbbb"
+};
+
 class Topbar extends React.Component {
   render() {
     return (
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand to="/">Miguel Diaz</Navbar.Brand>
+      <Navbar collapseOnSelect expand="lg" style={Gray}>
+        <Navbar.Brand to="/" style={noUnderline}>
+          Miguel Diaz
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Link style={normalText} to="/">
+            <Link to="/" style={noUnderline}>
               <Nav.Link href="/">About Me</Nav.Link>
             </Link>{" "}
-            <Link style={normalText} to="/techstack">
+            <Link style={noUnderline} to="/techstack">
               <Nav.Link href="/techstack">Skills</Nav.Link>
             </Link>{" "}
-            <Link style={normalText} to="/projects">
+            <Link style={noUnderline} to="/projects">
               <Nav.Link href="/projects">Projects</Nav.Link>
             </Link>{" "}
           </Nav>
