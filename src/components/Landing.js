@@ -12,71 +12,41 @@ class Landing extends Component {
         <Head>
           <Batman src={BatmanLego} />
           <ProfileDiv>
-            <Me src={me} />
-            <Name> Miguel Diaz </Name>
+            {/* <Me src={me} /> */}
+            <Name> Miguel </Name>
+            <Name2> Diaz</Name2>
           </ProfileDiv>
         </Head>
+        <AboutMe>
+          <AboutText>
+            <Title>About Me</Title>
+            <Text>Hello, i amamadlksf;lasdfj;ldsjfdsjakfaskjl;fd;l</Text>
+          </AboutText>
+        </AboutMe>
       </>
     );
   }
 }
-
 const Head = styled.div`
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+
+  @media (max-width: 1425px) {
+    height: auto;
+  }
 `;
 
 const Batman = styled.img`
   z-index: -1;
   filter: grayscale(80%);
   width: 100%;
-  position: absolute;
-  top: -150px;
   overflow: hidden;
-  height: 117vh;
   transition: 0.5s ease;
   @media (max-width: 1650px) {
     transition: 0.5s ease;
-    top: -100px;
-    height: auto;
-
-    /* nested rules work as expected */
-  }
-  @media (max-width: 1450px) {
-    transition: 0.5s ease;
-    top: -50px;
-
-    /* nested rules work as expected */
-  }
-  @media (max-width: 950px) {
-    transition: 0.5s ease;
-    top: 0px;
-
-    /* nested rules work as expected */
-  }
-`;
-const Me = styled.img`
-  width: 25em;
-  border-radius: 48%;
-  transition: 1s ease;
-  @media only screen and (max-width: 1390px) {
-    width: 15em;
-    border-radius: 150px;
-    transition: 1s ease;
-  }
-  @media (max-width: 900px) {
-    width: 14em;
-    top: 0px;
-    transition: 1s ease;
-    /* nested rules work as expected */
-  }
-
-  @media (max-width: 600px) {
-    width: 10em;
-    top: 0px;
-    /* nested rules work as expected */
   }
 `;
 
@@ -86,13 +56,11 @@ const ProfileDiv = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   transition: 0.1s ease;
   @media (max-width: 900px) {
     transition: 0.1s ease;
     top: 90px;
-    /* nested rules work as expected */
   }
 `;
 const Name = styled.p`
@@ -102,6 +70,33 @@ const Name = styled.p`
   -webkit-text-stroke: 2px black;
   text-transform: uppercase;
   transition: 1s ease;
+  margin: 0;
+  padding: 0;
+  @media only screen and (max-width: 1650px) {
+    transition: 1s ease;
+    font-size: 80px;
+  }
+  @media (max-width: 900px) {
+    transition: 1s ease;
+    font-size: 60px;
+  }
+
+  @media (max-width: 600px) {
+    transition: 1s ease;
+    font-size: 40px;
+  }
+`;
+
+const Name2 = styled.p`
+  font-size: 120px;
+  color: white;
+  font-family: "Bangers", cursive;
+  -webkit-text-stroke: 2px black;
+  text-transform: uppercase;
+  transition: 1s ease;
+  line-height: 0.1;
+  margin: 0;
+  padding: 0;
   @media only screen and (max-width: 1650px) {
     transition: 1s ease;
     font-size: 80px;
@@ -119,4 +114,33 @@ const Name = styled.p`
   }
 `;
 
+const AboutMe = styled.div`
+  height: 28em;
+  background-color: #f4faff;
+`;
+
+const AboutText = styled.div`
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+`;
+const Title = styled.p`
+  font-size: 30px;
+  color: #309ac9;
+  font-family: "Bangers", cursive;
+  -webkit-text-stroke: 1px black;
+  display: flex;
+  justify-content: flex-start;
+`;
+
+const Text = styled.p`
+  display: flex;
+  color: white;
+  justify-content: flex-start;
+  font-size: 20px;
+  font-family: "Bangers", cursive;
+  -webkit-text-stroke: 0.8px black;
+  line-height: 0;
+`;
 export default Landing;

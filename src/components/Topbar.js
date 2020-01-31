@@ -11,7 +11,8 @@ const noUnderline = {
   fontSize: "20px"
 };
 const Gray = {
-  backgroundColor: "#bbbbbb"
+  backgroundColor: "#bbbbbb",
+  zIndex: "2"
 };
 
 class Topbar extends React.Component {
