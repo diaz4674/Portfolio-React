@@ -20,8 +20,17 @@ class Landing extends Component {
         <AboutMe>
           <AboutText>
             <Title>About Me</Title>
-            <Text>Hello, i amamadlksf;lasdfj;ldsjfdsjakfaskjl;fd;l</Text>
+            <Text>
+              I am a full-stack developer with a particular interest in
+              front-end development. When I am not programming, I like to 3D
+              model designs, send it to my 3D printer and make them come to
+              life. I also like to spend time with my two cats, and my
+              supportive wife.
+            </Text>
           </AboutText>
+          <CarouselImages>
+            <img src={me} />
+          </CarouselImages>
         </AboutMe>
       </>
     );
@@ -116,20 +125,32 @@ const Name2 = styled.p`
 
 const AboutMe = styled.div`
   height: 28em;
-  background-color: #f4faff;
+  background-color: #feffe4;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
 `;
 
 const AboutText = styled.div`
   padding: 25px;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
+  height: auto;
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 const Title = styled.p`
-  font-size: 30px;
-  color: #309ac9;
+  font-size: 35px;
+  color: #f6c102;
   font-family: "Bangers", cursive;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 0.8px black;
   display: flex;
   justify-content: flex-start;
 `;
@@ -138,9 +159,16 @@ const Text = styled.p`
   display: flex;
   color: white;
   justify-content: flex-start;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Bangers", cursive;
   -webkit-text-stroke: 0.8px black;
-  line-height: 0;
+  flex-wrap: wrap;
+  word-break: break-all;
+  white-space: normal;
+`;
+
+const CarouselImages = styled.div`
+  display: flex;
+  padding: 20px 25px;
 `;
 export default Landing;
