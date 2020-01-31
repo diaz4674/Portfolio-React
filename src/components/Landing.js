@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import me from "../images/me.png";
+import me from "../images/me.jfif";
 import BatmanLego from "../images/BatmanLego.jpg";
 import styled from "styled-components";
 class Landing extends Component {
