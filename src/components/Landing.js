@@ -21,11 +21,12 @@ class Landing extends Component {
           <AboutText>
             <Title>About Me</Title>
             <Text>
-              I am a full-stack developer with a particular interest in
-              front-end development. When I am not programming, I like to 3D
-              model designs, send it to my 3D printer and make them come to
-              life. I also like to spend time with my two cats, and my
-              supportive wife.
+              {/* I am a full-stack developer with a particular interest in
+              front-end development. I enjoy learning different tech, which
+              allows me to bring my creative visions to life.  */}
+              I am a creative full stack developer that enjoys to learn
+              different tech stacks, and solve complex problems. I also like to
+              spend time with my two cats, and my supportive wife.
             </Text>
           </AboutText>
           <CarouselImages>
@@ -129,7 +130,7 @@ const AboutMe = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1030px) {
     flex-direction: column;
     height: auto;
     align-items: center;
@@ -142,7 +143,7 @@ const AboutText = styled.div`
   flex-direction: column;
   width: 60%;
   height: auto;
-  @media (max-width: 900px) {
+  @media (max-width: 1030px) {
     width: 80%;
   }
 `;
@@ -157,13 +158,13 @@ const Title = styled.p`
 
 const Text = styled.p`
   display: flex;
-  color: white;
+  color: black;
   justify-content: flex-start;
-  font-size: 25px;
+  font-size: 30px;
   font-family: "Bangers", cursive;
-  -webkit-text-stroke: 0.8px black;
+  /* -webkit-text-stroke: 1px black; */
   flex-wrap: wrap;
-  word-break: break-all;
+  word-wrap: break-word;
   white-space: normal;
 `;
 
