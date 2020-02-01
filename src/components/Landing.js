@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import me from "../images/me.jfif";
 import BatmanLego from "../images/BatmanLego.jpg";
 import styled from "styled-components";
+import Portrait from "./Portrait";
+
 class Landing extends Component {
   componentDidMount() {
     console.log("landing");
@@ -30,7 +31,7 @@ class Landing extends Component {
             </Text>
           </AboutText>
           <CarouselImages>
-            <img src={me} />
+            <Portrait />
           </CarouselImages>
         </AboutMe>
       </>
@@ -125,7 +126,7 @@ const Name2 = styled.p`
 `;
 
 const AboutMe = styled.div`
-  height: 28em;
+  height: 30em;
   background-color: #feffe4;
   display: flex;
   justify-content: space-between;
@@ -171,5 +172,8 @@ const Text = styled.p`
 const CarouselImages = styled.div`
   display: flex;
   padding: 20px 25px;
+  width: 500px;
+  overflow: hidden;
+  justify-content: center;
 `;
 export default Landing;
