@@ -11,7 +11,7 @@ const noUnderline = {
   fontSize: "20px"
 };
 const Gray = {
-  backgroundColor: "#bbbbbb",
+  backgroundColor: "#2F9BCA",
   zIndex: "2"
 };
 
