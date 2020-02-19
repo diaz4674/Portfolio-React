@@ -32,25 +32,41 @@ class Video1 extends React.Component {
   };
 
   render = () => {
+    const StartVideo = {
+      height: "auto",
+      position: "absolute",
+      zIndex: this.state.video1Finished ? "0" : "2",
+      opacity: this.state.video1Finished ? "0" : "1"
+    };
+
+    const Video2 = {
+      height: "auto",
+      position: "absolute",
+      zIndex: this.state.video1Finished ? "2" : "0",
+      opacity: this.state.video1Finished ? "1" : "0"
+    };
+
     return (
       <Container>
-        <Video
+        <video
+          style={StartVideo}
           ref="vidRef"
           onEnded={this.switchVideo}
           src={VideoOne}
           type="video/mp4"
+          autoPlay
+          muted
         />
-        <Video
+        <video
+          style={Video2}
           ref="vidRef"
           onEnded={this.switchVideo}
           src={VideoTwo}
           type="video/mp4"
+          loop
+          autoPlay
+          muted
         />
-
-        <div>
-          <button onClick={this.playVideo}>Play!</button>
-          <button onClick={this.pauseVideo}>Pause!</button>
-        </div>
       </Container>
     );
   };
@@ -61,7 +77,4 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const Video = styled.video`
-  height: auto;
-`;
 export default Video1;
