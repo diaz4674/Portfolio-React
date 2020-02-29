@@ -14,7 +14,7 @@ class Landing extends Component {
   }
   render() {
     return (
-      <>
+      <Body>
         <Head>
           <Video1 style={Vid1} />
         </Head>
@@ -34,10 +34,17 @@ class Landing extends Component {
             <Portrait />
           </CarouselImages>
         </AboutMe>
-      </>
+      </Body>
     );
   }
 }
+
+const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const Head = styled.div`
   height: auto;
   display: flex;
@@ -49,7 +56,6 @@ const Head = styled.div`
     height: auto;
   } */
 `;
-
 // const Batman = styled.img`
 //   z-index: -1;
 //   filter: grayscale(80%);
