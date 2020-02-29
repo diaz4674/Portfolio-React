@@ -55,11 +55,25 @@ const Head = styled.div`
   width: 100%;
   position: relative;
   margin-bottom: -145px;
-  /* height: 100vh;
 
-  @media (max-width: 1425px) {
-    height: auto;
-  } */
+  @media (max-width: 1850px) {
+    margin-bottom: -116;
+  }
+  @media (max-width: 1800px) {
+    margin-bottom: -115px;
+  }
+  @media (max-width: 1600px) {
+    margin-bottom: -86px;
+  }
+  @media (max-width: 1500px) {
+    margin-bottom: -66px;
+  }
+  @media (max-width: 1500px) {
+    margin-bottom: -36px;
+  }
+  @media (max-width: 1200px) {
+    margin-bottom: -6px;
+  }
 `;
 
 const AboutMe = styled.div`

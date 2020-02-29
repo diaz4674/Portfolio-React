@@ -37,7 +37,8 @@ class Video1 extends React.Component {
       position: "relative",
       zIndex: this.state.video1Finished ? "0" : "2",
       opacity: this.state.video1Finished ? "0" : "1",
-      width: "100%"
+      width: "100%",
+      transition: "ease .1s"
     };
 
     const Video2 = {
@@ -45,6 +46,7 @@ class Video1 extends React.Component {
       position: "absolute",
       zIndex: this.state.video1Finished ? "2" : "0",
       opacity: this.state.video1Finished ? "1" : "0",
+      transition: "ease .1s",
       width: "100%"
     };
 
@@ -58,6 +60,7 @@ class Video1 extends React.Component {
           type="video/mp4"
           loop
           autoPlay
+          playsInline
           muted
         />
 
@@ -68,6 +71,7 @@ class Video1 extends React.Component {
           src={VideoOne}
           type="video/mp4"
           autoPlay
+          playsInline
           muted
         />
       </Container>
@@ -80,6 +84,26 @@ const Container = styled.div`
   top: -139px;
   position: relative;
   width: 100%;
+  transition: ease 0.1s;
+
+  @media (max-width: 1850px) {
+    top: -115px;
+  }
+  @media (max-width: 1800px) {
+    top: -109px;
+  }
+  @media (max-width: 1600px) {
+    top: -80px;
+  }
+  @media (max-width: 1500px) {
+    top: -60px;
+  }
+  @media (max-width: 1500px) {
+    top: -30px;
+  }
+  @media (max-width: 1200px) {
+    top: 0px;
+  }
 `;
 
 export default Video1;
