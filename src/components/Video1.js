@@ -45,6 +45,7 @@ class Video1 extends React.Component {
       position: "absolute",
       zIndex: this.state.video1Finished ? "2" : "0",
       opacity: this.state.video1Finished ? "1" : "0",
+
       width: "100%"
     };
 
