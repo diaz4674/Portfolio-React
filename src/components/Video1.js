@@ -33,30 +33,23 @@ class Video1 extends React.Component {
 
   render = () => {
     const StartVideo = {
-      height: "90vh",
-      position: "absolute",
+      // height: "90vh",
+      position: "relative",
       zIndex: this.state.video1Finished ? "0" : "2",
-      opacity: this.state.video1Finished ? "0" : "1"
+      opacity: this.state.video1Finished ? "0" : "1",
+      width: "100%"
     };
 
     const Video2 = {
-      height: "90vh",
+      // height: "90vh",
       position: "absolute",
       zIndex: this.state.video1Finished ? "2" : "0",
-      opacity: this.state.video1Finished ? "1" : "0"
+      opacity: this.state.video1Finished ? "1" : "0",
+      width: "100%"
     };
 
     return (
       <Container>
-        <video
-          style={StartVideo}
-          ref="vidRef"
-          onEnded={this.switchVideo}
-          src={VideoOne}
-          type="video/mp4"
-          autoPlay
-          muted
-        />
         <video
           style={Video2}
           ref="vidRef"
@@ -67,13 +60,24 @@ class Video1 extends React.Component {
           autoPlay
           muted
         />
+
+        <video
+          style={StartVideo}
+          ref="vidRef"
+          onEnded={this.switchVideo}
+          src={VideoOne}
+          type="video/mp4"
+          autoPlay
+          muted
+        />
       </Container>
     );
   };
 }
 
 const Container = styled.div`
-  height: auto;
+  /* height: 90vh; */
+  position: relative;
   width: 100%;
 `;
 
