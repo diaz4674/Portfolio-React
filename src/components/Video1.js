@@ -78,6 +78,7 @@ class Video1 extends React.Component {
 
 const Container = styled.div`
   /* height: 90vh; */
+  top: -139px;
   position: relative;
   width: 100%;
 `;
