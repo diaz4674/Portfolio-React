@@ -15,9 +15,9 @@ class Landing extends Component {
   render() {
     return (
       <Body>
-        {/* <Head> */}
-        <Video1 style={Vid1} />
-        {/* </Head> */}
+        <Head>
+          <Video1 style={Vid1} />
+        </Head>
         <AboutMe>
           <AboutText>
             <Title>About Me</Title>
@@ -49,13 +49,12 @@ const Body = styled.div`
 `;
 
 const Head = styled.div`
-  height: auto;
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   position: relative;
-  background-color: red;
+  margin-bottom: -145px;
   /* height: 100vh;
 
   @media (max-width: 1425px) {
@@ -68,7 +67,7 @@ const AboutMe = styled.div`
   background-color: #feffe4;
   display: flex;
   justify-content: space-between;
-  top: auto;
+
   @media (max-width: 1030px) {
     flex-direction: column;
     height: auto;
