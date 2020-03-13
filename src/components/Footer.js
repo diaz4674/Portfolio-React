@@ -145,6 +145,7 @@ const LeftSection = styled.div`
   width: 80%;
   border-right: 1.4px solid #d6d6d6;
   @media (max-width: 960px) {
+    margin: 20px 0;
     border-right: 0px solid;
     border-bottom: 1.4px solid #d6d6d6;
   }
