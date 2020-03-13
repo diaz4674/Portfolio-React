@@ -58,7 +58,8 @@ class Landing extends Component {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 80%;
+  flex-wrap: wrap;
 `;
 
 // const Television = styled.div`
