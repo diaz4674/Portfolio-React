@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Portrait from "./Portrait";
+// import Portrait from "./Portrait";
 import Video1 from "./Video1";
+import ScrollableAnchor from "react-scrollable-anchor";
+import TechSection from "./TechSection";
+import Footer from "./Footer";
 
 const Vid1 = {
   width: "100%",
@@ -18,22 +21,26 @@ class Landing extends Component {
         <Head>
           <Video1 style={Vid1} />
         </Head>
-        <AboutMe>
-          <AboutText>
-            <Title>About Me</Title>
-            <Text>
-              {/* I am a full-stack developer with a particular interest in
+        <ScrollableAnchor id={"About_me"}>
+          <AboutMe>
+            <AboutText>
+              <Title>ABOUT</Title>
+              <Text>
+                {/* I am a full-stack developer with a particular interest in
               front-end development. I enjoy learning different tech, which
               allows me to bring my creative visions to life.  */}
-              I am a creative full stack developer that enjoys to learn
-              different tech stacks, and solve complex problems. I also like to
-              spend time with my two cats, and my supportive wife.
-            </Text>
-          </AboutText>
-          <CarouselImages>
-            <Portrait />
-          </CarouselImages>
-        </AboutMe>
+                I am a creative full stack developer that enjoys to learn
+                different tech stacks, and solve complex problems. I also like
+                to spend time with my two cats, and my supportive wife.
+              </Text>
+            </AboutText>
+            {/* <CarouselImages>
+              <Portrait />
+            </CarouselImages> */}
+          </AboutMe>
+        </ScrollableAnchor>
+        <TechSection />
+        <Footer />
       </Body>
     );
   }
@@ -78,9 +85,10 @@ const Head = styled.div`
 
 const AboutMe = styled.div`
   height: 30em;
-  background-color: #feffe4;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  background-color: "black";
+  padding-top: 50px;
+  margin-bottom: 90px;
 
   @media (max-width: 1030px) {
     flex-direction: column;
@@ -93,7 +101,6 @@ const AboutText = styled.div`
   padding: 25px;
   display: flex;
   flex-direction: column;
-  width: 60%;
   height: auto;
   @media (max-width: 1030px) {
     width: 80%;
@@ -102,8 +109,7 @@ const AboutText = styled.div`
 const Title = styled.p`
   font-size: 35px;
   color: #f6c102;
-  font-family: "Bangers", cursive;
-  -webkit-text-stroke: 0.8px black;
+  font-family: "raleway-bold";
   display: flex;
   justify-content: flex-start;
 `;
@@ -113,7 +119,7 @@ const Text = styled.p`
   color: black;
   justify-content: flex-start;
   font-size: 30px;
-  font-family: "Bangers", cursive;
+  font-family: "raleway-bold";
   /* -webkit-text-stroke: 1px black; */
   flex-wrap: wrap;
   word-wrap: break-word;

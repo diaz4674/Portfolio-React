@@ -11,7 +11,7 @@ const noUnderline = {
   fontSize: "20px"
 };
 const Gray = {
-  backgroundColor: "#2F9BCA",
+  backgroundColor: "#f5bd07",
   zIndex: "50"
 };
 
@@ -26,7 +26,7 @@ class Topbar extends React.Component {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Link to="/" style={noUnderline}>
-              <Nav.Link href="/">About Me</Nav.Link>
+              <Nav.Link href="#About_me">About Me</Nav.Link>
             </Link>{" "}
             <Link style={noUnderline} to="/techstack">
               <Nav.Link href="/techstack">Skills</Nav.Link>
