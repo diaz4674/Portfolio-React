@@ -35,9 +35,12 @@ class AboutMe extends Component {
 const Container = styled.div`
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 90%;
   flex-wrap: wrap;
-  background-color: #eef1ff;
+  padding-right: 5%;
+  @media (max-width: 1230px) {
+    padding-right: 0;
+  }
 `;
 
 const AboutText = styled.div`
@@ -46,9 +49,7 @@ const AboutText = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   height: auto;
-  @media (max-width: 1030px) {
-    width: 80%;
-  }
+  background-color: #eef1ff;
 `;
 
 const Title = styled.p`
@@ -64,7 +65,7 @@ const Title = styled.p`
 `;
 
 const Text = styled.p`
-  font-size: 25px;
+  font-size: 18px;
   padding: 10px;
   display: flex;
   font-weight: 900;

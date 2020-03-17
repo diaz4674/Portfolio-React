@@ -89,15 +89,18 @@ const AboutMeDiv = styled.div`
   align-items: center;
   background-color: #fffcbc;
   padding: 26px 0;
-  @media (max-width: 600px) {
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-  }
 `;
 
 const AboutMeCoreDiv = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  padding-top: 15px;
+  width: 100%;
+  @media (max-width: 1230px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 export default Landing;
