@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import Bar from "./Bar";
 import Git from "../icons/Git.png";
 import CSS3 from "../icons/CSS3.png";
 import HTMLLogo from "../icons/HTMLLogo.png";
 import JavasciptLogo from "../icons/JS.png";
 import ReactLogo from "../icons/React.png";
+import BataRang from "../icons/batarang.png";
 import dj from "../icons/dj.png";
 import NodeIcon from "../icons/node.png";
 import python from "../icons/python.png";
@@ -14,38 +16,48 @@ class Landing extends Component {
     return (
       <>
         <Container>
-          {/* <Television>
-            <BlueScreen> */}
+          <TitleDiv>
+            <Title> Technologies </Title>
+            <BataRangIcon src={BataRang} />
+          </TitleDiv>
           <LogoContainer>
-            <Img src={ReactLogo} alt="" /> <Text> React </Text>
+            <Img src={ReactLogo} alt="React" />
+            <Bar name="React" />
           </LogoContainer>
           <LogoContainer>
             {" "}
-            <Img src={JavasciptLogo} alt="" /> <Text> JavaScript </Text>{" "}
+            <Img src={JavasciptLogo} alt="JavaScript" />
+            <Bar name="JavaScript" />
           </LogoContainer>
           <LogoContainer>
             {" "}
-            <Img src={python} alt="" /> <Text> Python </Text>{" "}
+            <Img src={python} alt="" />
+            <Bar name="Python" />
           </LogoContainer>
           <LogoContainer>
             {" "}
-            <Img src={dj} alt="" /> <Text> Django</Text>{" "}
+            <Img src={dj} alt="" />
+            <Bar name="Django" />
           </LogoContainer>
           <LogoContainer>
             {" "}
-            <Img src={NodeIcon} alt="" /> <Text> Node</Text>{" "}
+            <Img src={NodeIcon} alt="" />
+            <Bar name="Node" />
           </LogoContainer>
           <LogoContainer>
             {" "}
-            <Img src={HTMLLogo} alt="" /> <Text> HTML5</Text>{" "}
+            <Img src={HTMLLogo} alt="" />
+            <Bar name="HTML" />
           </LogoContainer>
           <LogoContainer>
             {" "}
-            <Img src={CSS3} alt="" /> <Text> CSS3</Text>{" "}
+            <Img src={CSS3} alt="" />
+            <Bar name="CSS3" />
           </LogoContainer>
           <LogoContainer>
             {" "}
-            <Img src={Git} alt="" /> <Text> Git </Text>{" "}
+            <Img src={Git} alt="" />
+            <Bar name="GIT" />
           </LogoContainer>
           {/* </BlueScreen>
           </Television> */}
@@ -57,50 +69,39 @@ class Landing extends Component {
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 80%;
-  flex-wrap: wrap;
+  width: 100%;
 `;
 
-// const Television = styled.div`
-//   z-index: -2;
-//   background-color: black;
-//   width: 90%;
-//   position: relative;
-//   display: flex;
-//   justify-content: center;
-// `;
-// const BlueScreen = styled.div`
-//   z-index: -1;
-//   background-color: blue;
-//   width: 80%;
-//   position: relative;
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: center;
-// `;
 const LogoContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 130px;
+  flex-direction: row;
   margin: 15px;
 `;
-const Text = styled.p`
-  font-size: 25px;
-  padding: 10px;
-  display: flex;
-  font-weight: 900;
-  justify-content: center;
-  font-family: "raleway-bold";
-  text-transform: uppercase;
-`;
 
+const TitleDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+const Title = styled.p`
+  font-family: Bangers;
+  font-size: 37px;
+  margin: 0;
+`;
 const Img = styled.img`
   width: 8em;
   display: flex;
+  margin-right: 20px;
   justify-content: center;
 `;
-
+const BataRangIcon = styled.img`
+  width: 8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 export default Landing;
