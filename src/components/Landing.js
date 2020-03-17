@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-// import Portrait from "./Portrait";
+import AboutMe from "./AboutMe";
 import Video1 from "./Video1";
 import ScrollableAnchor from "react-scrollable-anchor";
 import TechSection from "./TechSection";
@@ -21,25 +21,15 @@ class Landing extends Component {
         <Head>
           <Video1 style={Vid1} />
         </Head>
-        <ScrollableAnchor id={"About_me"}>
-          <AboutMe>
-            <AboutText>
-              <Title>ABOUT</Title>
-              <Text>
-                {/* I am a full-stack developer with a particular interest in
-              front-end development. I enjoy learning different tech, which
-              allows me to bring my creative visions to life.  */}
-                I am a creative full stack developer that enjoys to learn
-                different tech stacks, and solve complex problems. I also like
-                to spend time with my two cats, and my supportive wife.
-              </Text>
-            </AboutText>
-            {/* <CarouselImages>
-              <Portrait />
-            </CarouselImages> */}
-          </AboutMe>
-        </ScrollableAnchor>
-        <TechSection />
+        <AboutMeDiv>
+          <ScrollableAnchor id={"About_me"}>
+            <Title> About Me </Title>
+          </ScrollableAnchor>
+          <AboutMeCoreDiv>
+            <TechSection />
+            <AboutMe />
+          </AboutMeCoreDiv>
+        </AboutMeDiv>
         <Footer />
       </Body>
     );
@@ -83,54 +73,31 @@ const Head = styled.div`
   }
 `;
 
-const AboutMe = styled.div`
-  height: 30em;
-  width: 100%;
-  background-color: "black";
-  padding-top: 50px;
-  margin-bottom: 90px;
-
-  @media (max-width: 1030px) {
+const Title = styled.p`
+  display: flex;
+  justify-content: center;
+  font-family: Bangers;
+  align-items: center;
+  font-size: 68px;
+  padding-bottom: 10px;
+  width: 96%;
+  border-bottom: black 1px solid;
+`;
+const AboutMeDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fffcbc;
+  padding: 26px 0;
+  @media (max-width: 600px) {
     flex-direction: column;
-    height: auto;
+    /* justify-content: center; */
     align-items: center;
   }
 `;
 
-const AboutText = styled.div`
-  padding: 25px;
+const AboutMeCoreDiv = styled.div`
   display: flex;
-  flex-direction: column;
-  height: auto;
-  @media (max-width: 1030px) {
-    width: 80%;
-  }
-`;
-const Title = styled.p`
-  font-size: 35px;
-  color: #f6c102;
-  font-family: "raleway-bold";
-  display: flex;
-  justify-content: flex-start;
-`;
-
-const Text = styled.p`
-  display: flex;
-  color: black;
-  justify-content: flex-start;
-  font-size: 30px;
-  font-family: "raleway-bold";
-  /* -webkit-text-stroke: 1px black; */
-  flex-wrap: wrap;
-  word-wrap: break-word;
-  white-space: normal;
-`;
-
-const CarouselImages = styled.div`
-  display: flex;
-  padding: 20px 25px;
-  width: 500px;
-  overflow: hidden;
-  justify-content: center;
+  flex-direction: row;
 `;
 export default Landing;

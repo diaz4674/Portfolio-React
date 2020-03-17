@@ -20,47 +20,47 @@ class Landing extends Component {
             <Title> Technologies </Title>
             <BataRangIcon src={BataRang} />
           </TitleDiv>
-          <LogoContainer>
-            <Img src={ReactLogo} alt="React" />
-            <Bar name="React" />
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={JavasciptLogo} alt="JavaScript" />
-            <Bar name="JavaScript" />
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={python} alt="" />
-            <Bar name="Python" />
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={dj} alt="" />
-            <Bar name="Django" />
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={NodeIcon} alt="" />
-            <Bar name="Node" />
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={HTMLLogo} alt="" />
-            <Bar name="HTML" />
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={CSS3} alt="" />
-            <Bar name="CSS3" />
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={Git} alt="" />
-            <Bar name="GIT" />
-          </LogoContainer>
-          {/* </BlueScreen>
-          </Television> */}
+          <TechDiv>
+            <LogoContainer>
+              <Img src={ReactLogo} alt="React" />
+              <Bar name="React" />
+            </LogoContainer>
+            <LogoContainer>
+              {" "}
+              <Img src={JavasciptLogo} alt="JavaScript" />
+              <Bar name="JavaScript" />
+            </LogoContainer>
+            <LogoContainer>
+              {" "}
+              <Img src={python} alt="" />
+              <Bar name="Python" />
+            </LogoContainer>
+            <LogoContainer>
+              {" "}
+              <Img src={dj} alt="" />
+              <Bar name="Django" />
+            </LogoContainer>
+            <LogoContainer>
+              {" "}
+              <Img src={NodeIcon} alt="" />
+              <Bar name="Node" />
+            </LogoContainer>
+            <LogoContainer>
+              {" "}
+              <Img src={HTMLLogo} alt="" />
+              <Bar name="HTML" />
+            </LogoContainer>
+            <LogoContainer>
+              {" "}
+              <Img src={CSS3} alt="" />
+              <Bar name="CSS3" />
+            </LogoContainer>
+            <LogoContainer>
+              {" "}
+              <Img src={Git} alt="" />
+              <Bar name="GIT" />
+            </LogoContainer>
+          </TechDiv>
         </Container>
       </>
     );
@@ -73,6 +73,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  flex-wrap: wrap;
 `;
 
 const LogoContainer = styled.div`
@@ -81,6 +82,11 @@ const LogoContainer = styled.div`
   margin: 15px;
 `;
 
+const TechDiv = styled.div`
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; */
+`;
 const TitleDiv = styled.div`
   display: flex;
   flex-direction: row;
@@ -93,7 +99,7 @@ const Title = styled.p`
   margin: 0;
 `;
 const Img = styled.img`
-  width: 8em;
+  width: 5em;
   display: flex;
   margin-right: 20px;
   justify-content: center;

@@ -1,92 +1,68 @@
 import React, { Component } from "react";
-import Git from "../icons/Git.png";
-import CSS3 from "../icons/CSS3.png";
-import HTMLLogo from "../icons/HTMLLogo.png";
-import JavasciptLogo from "../icons/JS.png";
-import ReactLogo from "../icons/React.png";
-import dj from "../icons/dj.webp";
-import NodeIcon from "../icons/node.png";
-import python from "../icons/python.png";
 import styled from "styled-components";
 
-class Landing extends Component {
+class AboutMe extends Component {
   render() {
     return (
-      <>
-        <Container>
-          {/* <Television>
-            <BlueScreen> */}
-          <LogoContainer>
-            <Img src={ReactLogo} alt="" /> <Text> React </Text>
-          </LogoContainer>
-          <LogoContainer>
+      <Container>
+        <AboutText>
+          <Title>Welcome!</Title>
+          <Text>
+            I am a Full Stack Engineer that loves to focus on creating
+            aesthetically pleasing colors, themes, and animations to generate a
+            strong user interface. I enjoy building a healthy working
+            relationship with people, by communicating, building rapport, and
+            organizing to build an effective work flow.
+          </Text>
+          <Text>
+            In the next five years, I am hoping to gain enough experience to be
+            considered a Senior Software Engineer.
+          </Text>
+
+          <Text>
             {" "}
-            <Img src={JavasciptLogo} alt="" /> <Text> JavaScript </Text>{" "}
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={python} alt="" /> <Text> Python </Text>{" "}
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={dj} alt="" /> <Text> Django</Text>{" "}
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={NodeIcon} alt="" /> <Text> Node</Text>{" "}
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={HTMLLogo} alt="" /> <Text> HTML5</Text>{" "}
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={CSS3} alt="" /> <Text> CSS3</Text>{" "}
-          </LogoContainer>
-          <LogoContainer>
-            {" "}
-            <Img src={Git} alt="" /> <Text> Git </Text>{" "}
-          </LogoContainer>
-          {/* </BlueScreen>
-          </Television> */}
-        </Container>
-      </>
+            Hobbies include 3D modeling designs and printing them out with my 3D
+            printer, as well as spending time with my wife & two cats. I have a
+            passion for learning, and spend time in Udemy to learn other skills,
+            such as the Adobe products that helped build this site.
+          </Text>
+        </AboutText>
+      </Container>
     );
   }
 }
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
   width: 80%;
   flex-wrap: wrap;
+  background-color: #eef1ff;
 `;
 
-// const Television = styled.div`
-//   z-index: -2;
-//   background-color: black;
-//   width: 90%;
-//   position: relative;
-//   display: flex;
-//   justify-content: center;
-// `;
-// const BlueScreen = styled.div`
-//   z-index: -1;
-//   background-color: blue;
-//   width: 80%;
-//   position: relative;
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: center;
-// `;
-const LogoContainer = styled.div`
+const AboutText = styled.div`
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 130px;
-  margin: 15px;
+  justify-content: flex-start;
+  height: auto;
+  @media (max-width: 1030px) {
+    width: 80%;
+  }
 `;
+
+const Title = styled.p`
+  font-size: 47px;
+  font-weight: 900;
+  color: #f6c102;
+  font-family: Bangers;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 0.2px black;
+  display: flex;
+  justify-content: flex-start;
+  text-transform: uppercase;
+`;
+
 const Text = styled.p`
   font-size: 25px;
   padding: 10px;
@@ -97,10 +73,4 @@ const Text = styled.p`
   text-transform: uppercase;
 `;
 
-const Img = styled.img`
-  width: 8em;
-  display: flex;
-  justify-content: center;
-`;
-
-export default Landing;
+export default AboutMe;
