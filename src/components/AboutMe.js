@@ -4,7 +4,7 @@ import CSS3 from "../icons/CSS3.png";
 import HTMLLogo from "../icons/HTMLLogo.png";
 import JavasciptLogo from "../icons/JS.png";
 import ReactLogo from "../icons/React.png";
-import dj from "../icons/dj.png";
+import dj from "../icons/dj.webp";
 import NodeIcon from "../icons/node.png";
 import python from "../icons/python.png";
 import styled from "styled-components";
