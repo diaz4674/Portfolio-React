@@ -80,14 +80,14 @@ const Title = styled.p`
   align-items: center;
   font-size: 68px;
   padding-bottom: 10px;
-  width: 96%;
-  border-bottom: black 1px solid;
+  width: 20%;
+  /* border-bottom: black 1px solid; */
 `;
 const AboutMeDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fffcbc;
+  background-color: #fffb9b;
   padding: 26px 0;
 `;
 

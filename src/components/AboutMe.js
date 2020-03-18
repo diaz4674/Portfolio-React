@@ -38,6 +38,7 @@ const Container = styled.div`
   width: 90%;
   flex-wrap: wrap;
   padding-right: 5%;
+
   @media (max-width: 1230px) {
     padding-right: 0;
   }
@@ -50,6 +51,7 @@ const AboutText = styled.div`
   justify-content: flex-start;
   height: auto;
   background-color: #eef1ff;
+  box-shadow: 0px 4px 30px black;
 `;
 
 const Title = styled.p`

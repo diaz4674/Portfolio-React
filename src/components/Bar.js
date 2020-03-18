@@ -37,7 +37,7 @@ const OuterBar = styled.div`
   width: 214px;
   height: 27px;
   border: 0.5px black solid;
-  box-shadow: 0px 4px 56px #ffe602;
+  box-shadow: 0px 4px 30px black;
 `;
 
 const Progress = styled.div`
