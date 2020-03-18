@@ -25,7 +25,7 @@ const Container = styled.div`
 `;
 
 const Text = styled.p`
-  color: white;
+  color: black;
   font-size: 25px;
   display: flex;
   font-weight: 900;
@@ -40,10 +40,10 @@ const OuterBar = styled.div`
   border: 0.5px black solid;
   @keyframes glowing {
     0% {
-      box-shadow: 0px 4px 15px #ffd95f;
+      box-shadow: 0px 4px 30px black;
     }
     100% {
-      box-shadow: 0px 4px 30px #ffd95f;
+      box-shadow: 0px 4px 10px black;
     }
   }
   animation: glowing 1.5s ease infinite alternate-reverse;

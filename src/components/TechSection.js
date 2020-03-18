@@ -96,7 +96,7 @@ const TitleDiv = styled.div`
   align-items: center;
 `;
 const Title = styled.p`
-  color: white;
+  color: black;
   font-family: Bangers;
   font-size: 37px;
   margin: 0;
