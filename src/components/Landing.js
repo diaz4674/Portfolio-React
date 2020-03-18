@@ -80,14 +80,14 @@ const Title = styled.p`
   align-items: center;
   font-size: 68px;
   padding-bottom: 10px;
-  width: 20%;
-  /* border-bottom: black 1px solid; */
+  color: white;
+  /* border-bottom: black 6px solid; */
 `;
 const AboutMeDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fffb9b;
+  background: linear-gradient(to right bottom, #4f4848 55%, #c5c5c5 45%);
   padding: 26px 0;
 `;
 
@@ -96,9 +96,10 @@ const AboutMeCoreDiv = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding-top: 15px;
-  width: 100%;
+  width: 80%;
+  justify-content: space-between;
   @media (max-width: 1230px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }

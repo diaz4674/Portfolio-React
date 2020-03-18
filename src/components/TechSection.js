@@ -72,7 +72,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   flex-wrap: wrap;
 `;
 
@@ -96,6 +96,7 @@ const TitleDiv = styled.div`
   align-items: center;
 `;
 const Title = styled.p`
+  color: white;
   font-family: Bangers;
   font-size: 37px;
   margin: 0;

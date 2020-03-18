@@ -25,6 +25,7 @@ const Container = styled.div`
 `;
 
 const Text = styled.p`
+  color: white;
   font-size: 25px;
   display: flex;
   font-weight: 900;
@@ -37,7 +38,15 @@ const OuterBar = styled.div`
   width: 214px;
   height: 27px;
   border: 0.5px black solid;
-  box-shadow: 0px 4px 30px black;
+  @keyframes glowing {
+    0% {
+      box-shadow: 0px 4px 15px #ffd95f;
+    }
+    100% {
+      box-shadow: 0px 4px 30px #ffd95f;
+    }
+  }
+  animation: glowing 1.5s ease infinite alternate-reverse;
 `;
 
 const Progress = styled.div`
