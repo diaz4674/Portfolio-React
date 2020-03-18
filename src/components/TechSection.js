@@ -79,13 +79,15 @@ const Container = styled.div`
 const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 15px;
+  margin: 25px;
 `;
 
 const TechDiv = styled.div`
-  /* display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap; */
+  flex-wrap: wrap;
 `;
 const TitleDiv = styled.div`
   display: flex;
