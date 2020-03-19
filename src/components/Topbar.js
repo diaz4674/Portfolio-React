@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const noUnderline = {
   textDecoration: "none",
@@ -15,27 +16,32 @@ const Gray = {
 class Topbar extends React.Component {
   render() {
     return (
-      <Navbar collapseOnSelect expand="lg" style={Gray}>
-        <Navbar.Brand to="/" style={noUnderline}>
-          Miguel Diaz
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Link to="/" style={noUnderline}>
-              <Nav.Link href="#About_me">About Me</Nav.Link>
-            </Link>{" "}
-            <Link style={noUnderline}>
-              <Nav.Link href="#Projects">Projects</Nav.Link>
-            </Link>{" "}
-            <Link style={noUnderline}>
-              <Nav.Link href="#Contact">Contact</Nav.Link>
-            </Link>{" "}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <Container>
+        <Navbar collapseOnSelect expand="lg" style={Gray}>
+          <Navbar.Brand to="/" style={noUnderline}>
+            Miguel Diaz
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+              <Link to="/" style={noUnderline}>
+                <Nav.Link href="#About_me">About Me</Nav.Link>
+              </Link>{" "}
+              <Link style={noUnderline}>
+                <Nav.Link href="#Projects">Projects</Nav.Link>
+              </Link>{" "}
+              <Link style={noUnderline}>
+                <Nav.Link href="#Contact">Contact</Nav.Link>
+              </Link>{" "}
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </Container>
     );
   }
 }
 
+const Container = styled.div`
+  width: 100%;
+`;
 export default Topbar;

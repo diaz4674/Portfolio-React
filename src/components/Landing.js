@@ -6,6 +6,7 @@ import Video1 from "./Video1";
 import ScrollableAnchor from "react-scrollable-anchor";
 import TechSection from "./TechSection";
 import Footer from "./Footer";
+import Topbar from "./Topbar";
 
 const Vid1 = {
   width: "100%",
@@ -18,36 +19,40 @@ class Landing extends Component {
   }
   render() {
     return (
-      <Body>
+      <>
         <Head>
+          <Topbar />
+        </Head>
+        <Body>
           <ScrollableAnchor id={"Home"}>
             <Video1 style={Vid1} />
           </ScrollableAnchor>
-        </Head>
-        <AboutMeDiv>
-          <ScrollableAnchor id={"About_me"}>
-            <Title> About Me </Title>
+
+          <AboutMeDiv>
+            <ScrollableAnchor id={"About_me"}>
+              <Title> About Me </Title>
+            </ScrollableAnchor>
+            <AboutMeCoreDiv>
+              <TechSection />
+              <AboutMe />
+            </AboutMeCoreDiv>
+          </AboutMeDiv>
+          <ProjectsDiv>
+            <ScrollableAnchor id={"Projects"}>
+              <Projects />
+            </ScrollableAnchor>
+          </ProjectsDiv>
+          <ScrollableAnchor id={"Contact"}>
+            <Footer />
           </ScrollableAnchor>
-          <AboutMeCoreDiv>
-            <TechSection />
-            <AboutMe />
-          </AboutMeCoreDiv>
-        </AboutMeDiv>
-        <ProjectsDiv>
-          <ScrollableAnchor id={"Projects"}>
-            <Projects />
-          </ScrollableAnchor>
-        </ProjectsDiv>
-        <ScrollableAnchor id={"Contact"}>
-          <Footer />
-        </ScrollableAnchor>
-        <BottomNav>
-          <a href="#Home"> Home </a>
-          <a href="#About_me"> About Me</a>
-          <a href="#Projects"> Projects</a>
-          <a href="#Contact"> Contact </a>
-        </BottomNav>
-      </Body>
+          <BottomNav>
+            <a href="#Home"> Home </a>
+            <a href="#About_me"> About Me</a>
+            <a href="#Projects"> Projects</a>
+            <a href="#Contact"> Contact </a>
+          </BottomNav>
+        </Body>
+      </>
     );
   }
 }
@@ -59,6 +64,7 @@ const Body = styled.div`
   height: 100%;
   position: relative;
   width: 100%;
+  background-color: #fffb9b;
 `;
 
 const Head = styled.div`
@@ -67,26 +73,6 @@ const Head = styled.div`
   justify-content: center;
   width: 100%;
   position: relative;
-  margin-bottom: -145px;
-
-  @media (max-width: 1850px) {
-    margin-bottom: -116;
-  }
-  @media (max-width: 1800px) {
-    margin-bottom: -115px;
-  }
-  @media (max-width: 1600px) {
-    margin-bottom: -86px;
-  }
-  @media (max-width: 1500px) {
-    margin-bottom: -66px;
-  }
-  @media (max-width: 1500px) {
-    margin-bottom: -36px;
-  }
-  @media (max-width: 1200px) {
-    margin-bottom: -6px;
-  }
 `;
 
 const Title = styled.p`
@@ -106,6 +92,7 @@ const AboutMeDiv = styled.div`
   background-color: #fffb9b;
   /* background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%); */
   padding: 26px 0;
+  margin: 0%;
 `;
 
 const AboutMeCoreDiv = styled.div`

@@ -80,11 +80,11 @@ class Video1 extends React.Component {
 }
 
 const Container = styled.div`
-  /* height: 90vh; */
-  top: -139px;
   position: relative;
   width: 100%;
   transition: ease 0.1s;
+  height: 100%;
+  top: -119px;
 
   @media (max-width: 1850px) {
     top: -115px;
