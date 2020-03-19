@@ -5,6 +5,7 @@ class Projects extends React.Component {
   render() {
     return (
       <Container>
+        <Title> Projects </Title>
         <Carousel />
       </Container>
     );

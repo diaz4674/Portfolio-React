@@ -91,8 +91,8 @@ const AboutMeDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: #fffb9b; */
-  background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%);
+  background-color: #fffb9b;
+  /* background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%); */
   padding: 26px 0;
 `;
 
@@ -114,5 +114,7 @@ const ProjectsDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px 0;
+  background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%);
 `;
 export default Landing;
