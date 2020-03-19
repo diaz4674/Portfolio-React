@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import VideoOne from "./vid1.mp4";
-import VideoTwo from "./vid2.mp4";
+import VideoOne from "./LandingVideos/vid1.mp4";
+import VideoTwo from "./LandingVideos/vid2.mp4";
 
 //Landing Page Video Component
 class Video1 extends React.Component {

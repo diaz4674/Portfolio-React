@@ -6,7 +6,7 @@ import Video1 from "./Video1";
 import ScrollableAnchor from "react-scrollable-anchor";
 import Tech from "./TechSection/Tech";
 import Footer from "./Footer";
-import Topbar from "./Topbar";
+import Topbar from "./NavBar";
 
 const Vid1 = {
   width: "100%",

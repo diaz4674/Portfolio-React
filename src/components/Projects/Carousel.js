@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import styled from "styled-components";
 import Description from "./Description";
-import Test from "../vid2.mp4";
+import Test from "../LandingVideos/vid2.mp4";
 
 // Projects Card Container that is a react-bootstrap Carousel
 class Projects extends React.Component {
