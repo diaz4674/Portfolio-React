@@ -73,6 +73,10 @@ class Projects extends React.Component {
                 React | React Hooks | Redux | CSS3 | Material-UI Framework |
                 Express | SQLite3 | Axios | Bcryptjs{" "}
               </Text>
+              <ButtonContainer>
+                <Live href="">Live Site</Live>
+                <GitRepo href="">Github Repo</GitRepo>
+              </ButtonContainer>
             </VideoContainer>
           </Carousel.Item>
           <Carousel.Item>
@@ -101,6 +105,10 @@ class Projects extends React.Component {
                 React | React Hooks | Redux | CSS3 | Material-UI Framework |
                 Express | SQLite3 | Axios | Bcryptjs{" "}
               </Text>
+              <ButtonContainer>
+                <Live href="">Live Site</Live>
+                <GitRepo href="">Github Repo</GitRepo>
+              </ButtonContainer>
             </VideoContainer>
           </Carousel.Item>
         </Carousel>
