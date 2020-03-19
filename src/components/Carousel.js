@@ -14,8 +14,8 @@ class Projects extends React.Component {
   render() {
     return (
       <Container>
-        <Carousel indicators={false}>
-          <Carousel.Item>
+        <Carousel indicators={false} interval={false} data-interval={false}>
+          <Carousel.Item interval={false} data-interval={false}>
             <VideoContainer>
               <Title> Bookmark </Title>
               <Video
@@ -38,7 +38,7 @@ class Projects extends React.Component {
               />
             </VideoContainer>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item interval={false} data-interval={false}>
             <VideoContainer>
               <Title> Bookmark </Title>
               <Video
@@ -61,7 +61,7 @@ class Projects extends React.Component {
               />
             </VideoContainer>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item interval={false} data-interval={false}>
             <VideoContainer>
               <Title> Bookmark </Title>
               <Video
