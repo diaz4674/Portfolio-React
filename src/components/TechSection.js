@@ -72,15 +72,15 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   flex-wrap: wrap;
 `;
 
 const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 25px;
-  padding: 30px;
+  /* margin: 25px; */
+  padding: 10px;
 `;
 
 const TechDiv = styled.div`

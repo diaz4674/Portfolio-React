@@ -2,9 +2,6 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const normalText = {
-  color: "white"
-};
 const noUnderline = {
   textDecoration: "none",
   fontFamily: "Bangers",
@@ -28,11 +25,8 @@ class Topbar extends React.Component {
             <Link to="/" style={noUnderline}>
               <Nav.Link href="#About_me">About Me</Nav.Link>
             </Link>{" "}
-            <Link style={noUnderline} to="/techstack">
-              <Nav.Link href="/techstack">Skills</Nav.Link>
-            </Link>{" "}
             <Link style={noUnderline} to="/projects">
-              <Nav.Link href="/projects">Projects</Nav.Link>
+              <Nav.Link href="#Projects">Projects</Nav.Link>
             </Link>{" "}
           </Nav>
         </Navbar.Collapse>

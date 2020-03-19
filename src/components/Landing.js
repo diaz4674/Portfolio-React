@@ -32,7 +32,9 @@ class Landing extends Component {
           </AboutMeCoreDiv>
         </AboutMeDiv>
         <ProjectsDiv>
-          <Projects />
+          <ScrollableAnchor id={"Projects"}>
+            <Projects />
+          </ScrollableAnchor>
         </ProjectsDiv>
         <Footer />
       </Body>
@@ -101,7 +103,7 @@ const AboutMeCoreDiv = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding-top: 15px;
-  width: 80%;
+  width: 100%;
   justify-content: space-between;
   @media (max-width: 1230px) {
     flex-direction: column-reverse;
