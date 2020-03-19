@@ -80,6 +80,7 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin: 25px;
+  padding: 30px;
 `;
 
 const TechDiv = styled.div`

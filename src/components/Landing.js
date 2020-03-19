@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import AboutMe from "./AboutMe";
+import Projects from "./Projects";
 import Video1 from "./Video1";
 import ScrollableAnchor from "react-scrollable-anchor";
 import TechSection from "./TechSection";
@@ -30,6 +31,9 @@ class Landing extends Component {
             <AboutMe />
           </AboutMeCoreDiv>
         </AboutMeDiv>
+        <ProjectsDiv>
+          <Projects />
+        </ProjectsDiv>
         <Footer />
       </Body>
     );
@@ -104,5 +108,11 @@ const AboutMeCoreDiv = styled.div`
     justify-content: center;
     align-items: center;
   }
+`;
+
+const ProjectsDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 export default Landing;
