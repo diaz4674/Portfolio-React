@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import AboutMe from "./AboutMe";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import Video1 from "./Video1";
 import ScrollableAnchor from "react-scrollable-anchor";
-import TechSection from "./TechSection";
+import Tech from "./TechSection/Tech";
 import Footer from "./Footer";
 import Topbar from "./Topbar";
 
@@ -33,7 +33,7 @@ class Landing extends Component {
               <Title> About Me </Title>
             </ScrollableAnchor>
             <AboutMeCoreDiv>
-              <TechSection />
+              <Tech />
               <AboutMe />
             </AboutMeCoreDiv>
           </AboutMeDiv>

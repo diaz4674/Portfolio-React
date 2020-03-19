@@ -32,6 +32,7 @@ class AboutMe extends Component {
   }
 }
 
+//Styles
 const Container = styled.div`
   display: flex;
   align-items: center;

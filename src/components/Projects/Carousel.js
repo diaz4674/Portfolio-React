@@ -2,14 +2,9 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import styled from "styled-components";
 import Description from "./Description";
-import Test from "./vid2.mp4";
-// const Video = {
-//   position: "relative",
-//   display: "none",
-//   float: "left",
-//   width: "100%",
-//   marginRight: "-100%"
-// };
+import Test from "../vid2.mp4";
+
+// Projects Card Container that is a react-bootstrap Carousel
 class Projects extends React.Component {
   render() {
     return (
@@ -90,12 +85,11 @@ class Projects extends React.Component {
   }
 }
 
+// Styles
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 30px black;
-  /* justify-content: center;
-  align-items: center; */
 `;
 
 const VideoContainer = styled.div`
@@ -115,7 +109,6 @@ const Title = styled.p`
   color: black;
   font-family: Bangers;
   font-size: 37px;
-  /* margin: 15px 0; */
 `;
 
 export default Projects;

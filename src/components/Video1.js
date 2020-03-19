@@ -3,12 +3,14 @@ import styled from "styled-components";
 import VideoOne from "./vid1.mp4";
 import VideoTwo from "./vid2.mp4";
 
+//Landing Page Video Component
 class Video1 extends React.Component {
   state = {
+    //State toggler to swap videos being rendered
     video1Finished: false
   };
   componentDidMount = () => {
-    this.playVideo();
+    // this.playVideo();
   };
 
   componentWillUnmount = () => {
@@ -16,25 +18,27 @@ class Video1 extends React.Component {
   };
 
   playVideo = () => {
-    // You can use the play method as normal on your video ref
+    // plays video when component mounts
     this.refs.vidRef.play();
   };
 
   pauseVideo = () => {
-    // Pause as well
+    // Pauses video when component unmounts
     this.refs.vidRef.pause();
   };
-
   switchVideo = async () => {
+    //When First video ends, switches to second video which is capable
+    //of renerding a seamless continuous loop of the waves and flowing cape
     console.log(this.state);
     await this.setState({ video1Finished: true });
     console.log(this.state);
   };
 
   render = () => {
+    // Non Styled-Components because of the ability to read state
     const StartVideo = {
-      // height: "90vh",
       position: "relative",
+      //Intro video that hides after it finishes and toggles the state
       zIndex: this.state.video1Finished ? "0" : "2",
       opacity: this.state.video1Finished ? "0" : "1",
       width: "100%",
@@ -42,7 +46,6 @@ class Video1 extends React.Component {
     };
 
     const Video2 = {
-      // height: "90vh",
       position: "absolute",
       zIndex: this.state.video1Finished ? "2" : "0",
       opacity: this.state.video1Finished ? "1" : "0",
@@ -53,6 +56,7 @@ class Video1 extends React.Component {
     return (
       <Container>
         <video
+          // Second part of video that has the continuous looponce all images settle
           style={Video2}
           ref="vidRef"
           onEnded={this.switchVideo}
@@ -63,8 +67,8 @@ class Video1 extends React.Component {
           playsInline
           muted
         />
-
         <video
+          // Start of video that has the icons popping into view
           style={StartVideo}
           ref="vidRef"
           onEnded={this.switchVideo}
@@ -79,6 +83,7 @@ class Video1 extends React.Component {
   };
 }
 
+// styled components
 const Container = styled.div`
   position: relative;
   width: 100%;

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-class Landing extends Component {
+// Technology Status Bar Component
+class Bar extends Component {
   render() {
     return (
       <>
@@ -38,6 +39,7 @@ const OuterBar = styled.div`
   width: 214px;
   height: 27px;
   border: 0.5px black solid;
+  /* Creates a hovering/glow effect depending on the shadow color */
   @keyframes glowing {
     0% {
       box-shadow: 0px 4px 30px black;
@@ -52,10 +54,9 @@ const OuterBar = styled.div`
 const Progress = styled.div`
   width: 100%;
   height: 27px;
-  /* position: absolute; */
   z-index: 2;
   border: 0.5px black solid;
   background-color: #f5bd07;
 `;
 
-export default Landing;
+export default Bar;

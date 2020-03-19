@@ -1,13 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-// const Video = {
-//   position: "relative",
-//   display: "none",
-//   float: "left",
-//   width: "100%",
-//   marginRight: "-100%"
-// };
+// Technology description Component
 class Desciption extends React.Component {
   render() {
     return (
@@ -29,6 +23,7 @@ class Desciption extends React.Component {
   }
 }
 
+// Styles
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -40,7 +35,6 @@ const Title = styled.p`
   color: black;
   font-family: Bangers;
   font-size: 37px;
-  /* margin: 15px 0; */
 `;
 
 const Text = styled.p`
@@ -52,8 +46,6 @@ const Text = styled.p`
   align-items: center;
   font-family: "raleway-bold";
   color: black;
-  /* padding: 15px; */
-  /* text-transform: uppercase; */
 `;
 
 const ButtonContainer = styled.div`
@@ -100,6 +92,6 @@ const GitRepo = styled.a`
     background-color: #f5bd07;
     text-decoration: none;
     font-size: 28px;
-  }Description
+  }
 `;
 export default Desciption;
