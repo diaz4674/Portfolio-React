@@ -25,8 +25,11 @@ class Topbar extends React.Component {
             <Link to="/" style={noUnderline}>
               <Nav.Link href="#About_me">About Me</Nav.Link>
             </Link>{" "}
-            <Link style={noUnderline} to="/projects">
+            <Link style={noUnderline}>
               <Nav.Link href="#Projects">Projects</Nav.Link>
+            </Link>{" "}
+            <Link style={noUnderline}>
+              <Nav.Link href="#Contact">Contact</Nav.Link>
             </Link>{" "}
           </Nav>
         </Navbar.Collapse>

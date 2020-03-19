@@ -20,7 +20,9 @@ class Landing extends Component {
     return (
       <Body>
         <Head>
-          <Video1 style={Vid1} />
+          <ScrollableAnchor id={"Home"}>
+            <Video1 style={Vid1} />
+          </ScrollableAnchor>
         </Head>
         <AboutMeDiv>
           <ScrollableAnchor id={"About_me"}>
@@ -36,7 +38,15 @@ class Landing extends Component {
             <Projects />
           </ScrollableAnchor>
         </ProjectsDiv>
-        <Footer />
+        <ScrollableAnchor id={"Contact"}>
+          <Footer />
+        </ScrollableAnchor>
+        <BottomNav>
+          <a href="#Home"> Home </a>
+          <a href="#About_me"> About Me</a>
+          <a href="#Projects"> Projects</a>
+          <a href="#Contact"> Contact </a>
+        </BottomNav>
       </Body>
     );
   }
@@ -118,5 +128,22 @@ const ProjectsDiv = styled.div`
   align-items: center;
   padding: 50px 0;
   background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%);
+`;
+
+const BottomNav = styled.div`
+  width: 390px;
+  z-index: 50;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  box-shadow: rgba(0, 0, 0, 0.2) -5px -5px 10px;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  border-top-left-radius: 20px;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 0px 45px 0px 0px;
 `;
 export default Landing;
