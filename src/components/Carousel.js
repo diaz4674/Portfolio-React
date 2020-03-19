@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import Description from "./Description";
 import Test from "./vid2.mp4";
 import Carousel from "react-bootstrap/Carousel";
 // const Video = {
@@ -29,22 +29,13 @@ class Projects extends React.Component {
                 muted
                 controls
               />
-              <Title> Summary </Title>
-              <Text>
-                {" "}
-                A site where users may store their favorite sites all in one
-                place, and browse by sections to view their saved sites.{" "}
-              </Text>
-              <Title> Tech Stack </Title>
-              <Text>
-                {" "}
-                React | React Hooks | Redux | CSS3 | Material-UI Framework |
-                Express | SQLite3 | Axios | Bcryptjs{" "}
-              </Text>
-              <ButtonContainer>
-                <Live href="">Live Site</Live>
-                <GitRepo href="">Github Repo</GitRepo>
-              </ButtonContainer>
+              <Description
+                description="A site where users may store their favorite sites all in one place, and browse by sections to view their saved sites."
+                tech=" React | React Hooks | Redux | CSS3 | Material-UI Framework |
+                Express | SQLite3 | Axios | Bcryptjs "
+                link="https://quizzical-blackwell-d608a3.netlify.com/"
+                gitrepo="https://github.com/diaz4674/BookMark"
+              />
             </VideoContainer>
           </Carousel.Item>
           <Carousel.Item>
@@ -61,22 +52,13 @@ class Projects extends React.Component {
                 muted
                 controls
               />
-              <Title> Summary </Title>
-              <Text>
-                {" "}
-                A site where users may store their favorite sites all in one
-                place, and browse by sections to view their saved sites.{" "}
-              </Text>
-              <Title> Tech Stack </Title>
-              <Text>
-                {" "}
-                React | React Hooks | Redux | CSS3 | Material-UI Framework |
-                Express | SQLite3 | Axios | Bcryptjs{" "}
-              </Text>
-              <ButtonContainer>
-                <Live href="">Live Site</Live>
-                <GitRepo href="">Github Repo</GitRepo>
-              </ButtonContainer>
+              <Description
+                description="A site where users may store their favorite sites all in one place, and browse by sections to view their saved sites."
+                tech=" React | React Hooks | Redux | CSS3 | Material-UI Framework |
+                Express | SQLite3 | Axios | Bcryptjs "
+                link="https://quizzical-blackwell-d608a3.netlify.com/"
+                gitrepo="https://github.com/diaz4674/BookMark"
+              />
             </VideoContainer>
           </Carousel.Item>
           <Carousel.Item>
@@ -93,22 +75,13 @@ class Projects extends React.Component {
                 muted
                 controls
               />
-              <Title> Summary </Title>
-              <Text>
-                {" "}
-                A site where users may store their favorite sites all in one
-                place, and browse by sections to view their saved sites.{" "}
-              </Text>
-              <Title> Tech Stack </Title>
-              <Text>
-                {" "}
-                React | React Hooks | Redux | CSS3 | Material-UI Framework |
-                Express | SQLite3 | Axios | Bcryptjs{" "}
-              </Text>
-              <ButtonContainer>
-                <Live href="">Live Site</Live>
-                <GitRepo href="">Github Repo</GitRepo>
-              </ButtonContainer>
+              <Description
+                description="A site where users may store their favorite sites all in one place, and browse by sections to view their saved sites."
+                tech=" React | React Hooks | Redux | CSS3 | Material-UI Framework |
+                Express | SQLite3 | Axios | Bcryptjs "
+                link="https://quizzical-blackwell-d608a3.netlify.com/"
+                gitrepo="https://github.com/diaz4674/BookMark"
+              />
             </VideoContainer>
           </Carousel.Item>
         </Carousel>
