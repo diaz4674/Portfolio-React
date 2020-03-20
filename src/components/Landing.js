@@ -7,16 +7,45 @@ import ScrollableAnchor from "react-scrollable-anchor";
 import Tech from "./TechSection/Tech";
 import Footer from "./Footer";
 import Topbar from "./NavBar";
+import BottomNav from "./BottomNav";
 
+// Header Video Style
 const Vid1 = {
   width: "100%",
   objectFit: "fill"
 };
 
 class Landing extends Component {
-  componentDidMount() {
-    console.log("landing");
-  }
+  // constructor(props) {
+  //   super(props);
+  //   // Don't call this.setState() here!
+  //   this.state = { prevScrollpos: window.pageYOffset, visible: true };
+  //   this.handleClick = this.handleClick.bind(this);
+  // }
+
+  // // Adds an event listener when the component is mount.
+  // componentDidMount() {
+  //   window.addEventListener("scroll", this.handleScroll);
+  // }
+
+  // // Remove the event listener when the component is unmount.
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll", this.handleScroll);
+  // }
+
+  // // Hide or show the menu.
+  // handleScroll = () => {
+  //   const { prevScrollpos } = this.state;
+
+  //   const currentScrollPos = window.pageYOffset;
+  //   const visible = prevScrollpos > currentScrollPos;
+
+  //   this.setState({
+  //     prevScrollpos: currentScrollPos,
+  //     visible
+  //   });
+  // };
+
   render() {
     return (
       <>
@@ -24,10 +53,11 @@ class Landing extends Component {
           <Topbar />
         </Head>
         <Body>
+          {/* ScrollableAnchor is used to navigate/auto scroll to the section once its selected
+          from navbar */}
           <ScrollableAnchor id={"Home"}>
             <Video1 style={Vid1} />
           </ScrollableAnchor>
-
           <AboutMeDiv>
             <ScrollableAnchor id={"About_me"}>
               <Title> About Me </Title>
@@ -45,12 +75,7 @@ class Landing extends Component {
           <ScrollableAnchor id={"Contact"}>
             <Footer />
           </ScrollableAnchor>
-          <BottomNav>
-            <a href="#Home"> Home </a>
-            <a href="#About_me"> About Me</a>
-            <a href="#Projects"> Projects</a>
-            <a href="#Contact"> Contact </a>
-          </BottomNav>
+          <BottomNav />
         </Body>
       </>
     );
@@ -83,14 +108,12 @@ const Title = styled.p`
   font-size: 68px;
   padding-bottom: 10px;
   color: black;
-  /* border-bottom: black 6px solid; */
 `;
 const AboutMeDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fffb9b;
-  /* background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%); */
   padding: 26px 0;
   margin: 0%;
 `;
@@ -117,20 +140,4 @@ const ProjectsDiv = styled.div`
   background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%);
 `;
 
-const BottomNav = styled.div`
-  width: 390px;
-  z-index: 50;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  justify-content: flex-end;
-  box-shadow: rgba(0, 0, 0, 0.2) -5px -5px 10px;
-  position: fixed;
-  right: 0px;
-  bottom: 0px;
-  border-top-left-radius: 20px;
-  background: rgba(255, 255, 255, 0.98);
-  padding: 0px 45px 0px 0px;
-`;
 export default Landing;

@@ -3,6 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+// Styles
 const noUnderline = {
   textDecoration: "none",
   fontFamily: "Bangers",
