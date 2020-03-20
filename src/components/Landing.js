@@ -113,7 +113,7 @@ const AboutMeDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fffb9b;
+  background-color: white;
   padding: 26px 0;
   margin: 0%;
 `;
