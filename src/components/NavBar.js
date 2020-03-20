@@ -2,6 +2,8 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Github from "../icons/Git.png";
+import LinkedIn from "../icons/linkedin.png";
 
 // Styles
 const noUnderline = {
@@ -35,6 +37,18 @@ class Topbar extends React.Component {
                 <Nav.Link href="#Contact">Contact</Nav.Link>
               </Link>{" "}
             </Nav>
+            <EndIcons>
+              <Link style={noUnderline}>
+                <Nav.Link href="#" target="_blank">
+                  <img src={Github} alt="Github" style={{ height: "2em" }} />
+                </Nav.Link>
+              </Link>{" "}
+              <Link style={noUnderline}>
+                <Nav.Link href="#" target="_blank">
+                  <img src={LinkedIn} alt="Github" style={{ height: "2em" }} />
+                </Nav.Link>
+              </Link>{" "}
+            </EndIcons>
           </Navbar.Collapse>
         </Navbar>
       </Container>
@@ -45,4 +59,6 @@ class Topbar extends React.Component {
 const Container = styled.div`
   width: 100%;
 `;
+
+const EndIcons = styled.div``;
 export default Topbar;
