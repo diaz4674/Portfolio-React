@@ -6,36 +6,15 @@ import Test from "../LandingVideos/vid2.mp4";
 
 // Projects Card Container that is a react-bootstrap Carousel
 class Projects extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-
-    this.handleSelect = this.handleSelect.bind(this);
-
-    this.state = {
-      index: 0,
-      direction: null
-    };
-  }
-
-  handleSelect(selectedIndex, e) {
-    this.setState({
-      index: selectedIndex,
-      direction: e.direction
-    });
-  }
   render() {
-    const { index, direction } = this.state;
     return (
       <Container>
-        <Carousel
-          activeIndex={index}
-          direction={direction}
-          onSelect={this.handleSelect}
-        >
+        <Carousel onSelect={this.handleSelect}>
           <Carousel.Item
             interval={false}
             data-interval={false}
             className="carousel"
+            indicators={false}
           >
             <VideoContainer>
               <Title> Bookmark </Title>
@@ -48,7 +27,7 @@ class Projects extends React.Component {
                 autoPlay
                 playsInline
                 muted
-                controls
+                // controls
               />
               <Description
                 description="A site where users may store their favorite sites all

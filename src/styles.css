@@ -15,6 +15,10 @@ body {
   z-index: 0;
 }
 
+.carousel-indicators li {
+  visibility: hidden;
+}
+
 .hamburger {
   width: 3em;
   height: auto;
