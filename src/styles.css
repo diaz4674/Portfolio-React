@@ -10,8 +10,8 @@ body {
   width: 100%;
   height: 100%;
 }
-.carousel {
-  position: relative;
+.carousel-control-next,
+.carousel-control-prev {
   z-index: 0;
 }
 
@@ -25,7 +25,7 @@ body {
 }
 
 .this {
-  z-index: 60;
+  z-index: 0;
   position: fixed;
   background-color: #e2e2e2;
   border-radius: 50px;
@@ -65,7 +65,6 @@ body {
   border: 0 solid black;
 }
 
-.slide :hover {
+/* .slide :hover {
   text-decoration: none;
-  z-index: 30;
-}
+} */
