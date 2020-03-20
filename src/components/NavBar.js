@@ -25,8 +25,11 @@ class Topbar extends React.Component {
             Miguel Diaz
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            style={{ justifyContent: "space-between" }}
+          >
+            <Nav className="mr-auto" style={{ alignItems: "center" }}>
               <Link to="/" style={noUnderline}>
                 <Nav.Link href="#About_me">About Me</Nav.Link>
               </Link>{" "}
@@ -60,5 +63,9 @@ const Container = styled.div`
   width: 100%;
 `;
 
-const EndIcons = styled.div``;
+const EndIcons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
 export default Topbar;
