@@ -128,6 +128,7 @@ const Container = styled.div`
   padding: 1.25rem;
   border: 0;
   margin: 0;
+  background-color: white;
   @media (max-width: 960px) {
     flex-direction: column;
   }

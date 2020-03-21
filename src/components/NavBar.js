@@ -50,7 +50,7 @@ class Topbar extends React.Component {
                 <Nav.Link href="#Projects">Projects</Nav.Link>
               </Link>{" "}
               <Link style={noUnderline}>
-                <Nav.Link href="#Cotact">Contact</Nav.Link>
+                <Nav.Link href="#Contact">Contact</Nav.Link>
               </Link>{" "}
             </Nav>
             <EndIcons>

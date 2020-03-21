@@ -88,7 +88,6 @@ const Container = styled.div`
   position: relative;
   width: 100%;
   transition: ease 0.1s;
-  /* height: 100%; */
   top: -119px;
 
   @media (max-width: 1850px) {

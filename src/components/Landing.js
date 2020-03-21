@@ -56,7 +56,7 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  /* height: 100%; */
   position: relative;
   width: 100%;
   background-color: #fffb9b;
@@ -84,7 +84,7 @@ const AboutMeDiv = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
-  padding: 26px 0;
+  padding: 35px 0;
   margin: 0%;
 `;
 
