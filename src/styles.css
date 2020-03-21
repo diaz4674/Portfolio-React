@@ -10,6 +10,8 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/* React-bootstrap carousel styles */
 .carousel-control-next,
 .carousel-control-prev {
   z-index: 0;
@@ -19,6 +21,7 @@ body {
   visibility: hidden;
 }
 
+/* Hamburger navigation hover effect to navigate sections */
 .hamburger {
   width: 3em;
   height: auto;
@@ -38,7 +41,7 @@ body {
   justify-content: flex-end;
   -webkit-box-pack: end;
   align-items: center;
-  transition: 0.5s ease;
+  transition: 0.8s ease;
   width: 4em;
   height: 65px;
   overflow: hidden;

@@ -135,7 +135,7 @@ const VideoContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 39px 0;
+  padding: 39px 15px;
 `;
 const Video = styled.video`
   margin: 20px 0;

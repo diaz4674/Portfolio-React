@@ -6,7 +6,7 @@ class BottomNav extends React.Component {
   render() {
     return (
       <>
-        <div className="slide this">
+        <div className="this">
           <Text href="#Home"> Home </Text>
           <Text href="#About_me"> About </Text>
           <Text href="#Projects"> Projects</Text>
