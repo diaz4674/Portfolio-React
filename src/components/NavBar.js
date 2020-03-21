@@ -43,9 +43,11 @@ class Topbar extends React.Component {
             style={{ justifyContent: "space-between" }}
           >
             <Nav className="mr-auto" style={{ alignItems: "center" }}>
-              <Link to="#About_me" style={noUnderline}>
-                <Nav.Link href="#About_me">About Me</Nav.Link>
-              </Link>{" "}
+              {/* <Link style={noUnderline}> */}
+              <Nav.Link href="#About_me" style={noUnderline}>
+                About Me
+              </Nav.Link>
+              {/* </Link>{" "} */}
               <Link style={noUnderline}>
                 <Nav.Link href="#Projects">Projects</Nav.Link>
               </Link>{" "}
