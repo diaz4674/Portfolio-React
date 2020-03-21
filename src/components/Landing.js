@@ -38,9 +38,7 @@ class Landing extends Component {
             </AboutMeCoreDiv>
           </AboutMeDiv>
           <ProjectsDiv>
-            <ScrollableAnchor id={"Projects"}>
-              <Projects />
-            </ScrollableAnchor>
+            <Projects />
           </ProjectsDiv>
           <ScrollableAnchor id={"Contact"}>
             <Footer />
