@@ -35,6 +35,7 @@ const Title = styled.p`
   color: black;
   font-family: Bangers;
   font-size: 37px;
+  margin: 0;
 `;
 
 const Text = styled.p`

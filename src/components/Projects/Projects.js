@@ -19,13 +19,15 @@ class Projects extends React.Component {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 73%;
 `;
 
 const Title = styled.p`
   color: black;
   font-family: Bangers;
-  font-size: 37px;
+  font-size: 68px;
   margin: 0;
 `;
 

@@ -127,6 +127,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 30px black;
+  width: 75%;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const VideoContainer = styled.div`
@@ -135,10 +140,10 @@ const VideoContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 39px 15px;
+  padding: 15px 15px;
 `;
 const Video = styled.video`
-  margin: 20px 0;
+  /* margin: 20px 0; */
   width: 100%;
 `;
 
