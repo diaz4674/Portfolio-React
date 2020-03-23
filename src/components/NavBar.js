@@ -1,6 +1,5 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Github from "../icons/Git.png";
 import LinkedIn from "../icons/linkedin.png";

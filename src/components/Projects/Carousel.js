@@ -31,8 +31,9 @@ class Projects extends React.Component {
           onSelect={this.handleSelect}
           interval={false}
           data-interval={false}
+          indicators={false}
         >
-          <Carousel.Item className="carousel" indicators={false}>
+          <Carousel.Item className="carousel">
             <VideoContainer>
               <Title> Legends of Alabastra </Title>
               <Video
@@ -44,7 +45,6 @@ class Projects extends React.Component {
                 autoPlay
                 playsInline
                 muted
-                // controls
               />
               <Description
                 description="A pirate adventure game where the user competes with other players to be the most feared pirate"
@@ -54,11 +54,7 @@ class Projects extends React.Component {
               />
             </VideoContainer>
           </Carousel.Item>
-          <Carousel.Item
-            interval={false}
-            data-interval={false}
-            className="carousel"
-          >
+          <Carousel.Item className="carousel">
             <VideoContainer>
               <Title> LyftQuest </Title>
               <Video
@@ -70,7 +66,6 @@ class Projects extends React.Component {
                 autoPlay
                 playsInline
                 muted
-                // controls
               />
               <Description
                 description="A workout tracker app that provides suggested workouts for users, and helps them track their progress."
@@ -80,11 +75,7 @@ class Projects extends React.Component {
               />
             </VideoContainer>
           </Carousel.Item>
-          <Carousel.Item
-            interval={false}
-            data-interval={false}
-            className="carousel"
-          >
+          <Carousel.Item className="carousel">
             <VideoContainer>
               <Title> Bookmark </Title>
               <Video
@@ -96,7 +87,6 @@ class Projects extends React.Component {
                 autoPlay
                 playsInline
                 muted
-                // controls
               />
               <Description
                 description="A site where users may store their favorite sites all
@@ -108,11 +98,7 @@ class Projects extends React.Component {
               />
             </VideoContainer>
           </Carousel.Item>
-          <Carousel.Item
-            interval={false}
-            data-interval={false}
-            className="carousel"
-          >
+          <Carousel.Item className="carousel">
             <VideoContainer>
               <Title> Stay at Home Moms </Title>
               <Video
@@ -124,7 +110,6 @@ class Projects extends React.Component {
                 autoPlay
                 playsInline
                 muted
-                // controls
               />
               <Description
                 description="A meet up app for stay at home moms to create/attend events with other stay at home moms to create a supportive and communal community."
