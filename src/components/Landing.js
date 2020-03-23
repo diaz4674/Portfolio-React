@@ -27,12 +27,20 @@ class Landing extends Component {
           {/* ScrollableAnchor is used to navigate/auto scroll to the section once its selected
           from navbar */}
           <ScrollableAnchor id={"Home"}>
-            <ScrollAnimation animateIn="fadeIn">
+            <ScrollAnimation
+              animateIn="fadeIn"
+              animateOut="fadeOut"
+              animateOnce={true}
+            >
               <Video1 style={Vid1} />
             </ScrollAnimation>
           </ScrollableAnchor>
           <AboutMeDiv>
-            <ScrollAnimation animateIn="fadeIn">
+            <ScrollAnimation
+              animateIn="bounceInRight"
+              animateOut="fadeOut"
+              animateOnce={true}
+            >
               <ScrollableAnchor id={"About_me"}>
                 <Title> About Me </Title>
               </ScrollableAnchor>
@@ -42,7 +50,11 @@ class Landing extends Component {
               </AboutMeCoreDiv>
             </ScrollAnimation>
           </AboutMeDiv>
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation
+            animateIn="fadeIn"
+            animateOut="fadeOut"
+            animateOnce={true}
+          >
             <ProjectsDiv>
               <Projects />
             </ProjectsDiv>

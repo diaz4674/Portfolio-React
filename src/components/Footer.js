@@ -4,6 +4,7 @@ import Git from "../icons/Git.png";
 import Linkedin from "../icons/linkedin.png";
 import Email from "../icons/mail.png";
 import Phone from "../icons/phone.png";
+import ScrollAnimation from "react-animate-on-scroll";
 
 class Footer extends React.Component {
   state = {
@@ -21,101 +22,107 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <Container>
-        <LeftSection>
-          <ContactContainer>
-            <Title> Contact Information </Title>
-            <SubContainer>
-              <Icons src={Phone} alt="phone" />
-              <Text>Phone: (415) 858-5179 </Text>
-            </SubContainer>
-            <SubContainer>
-              <Icons src={Email} alt="Email" />
-              <a href="mailto:diaz4674@gmail.com">
-                {" "}
-                <Text>Email: diaz4674@gmail.com</Text>{" "}
-              </a>
-            </SubContainer>
-          </ContactContainer>
-        </LeftSection>
-        <RightSection>
-          <Title>Social</Title>
-          <SocialIconContainer>
-            <IconContainer
-              onMouseEnter={this.toggleGit}
-              onMouseLeave={this.toggleGit}
-            >
-              <NewTab
-                target="_blank"
-                href="https://github.com/diaz4674"
-                style={{ textDecoration: "none" }}
-              >
-                <img
-                  src={Git}
-                  alt="Github"
-                  style={{
-                    height: "2em",
-                    transition: "ease 0.3s",
-                    marginBottom: "10px",
-                    transform: this.state.Github ? "scale(1.5, 1.5)" : ""
-                  }}
-                />
-                <p
-                  style={{
-                    fontSize: "20px",
-                    display: "flex",
-                    justifyContent: "center",
-                    fontFamily: "raleway-bold",
-                    color: "black",
-                    transition: "ease 0.3s",
-                    transform: this.state.Github ? "scale(1.1, 1.1)" : ""
-                    // textShadow: this.state.Github ? "1.5px 1.5px gray" : ""
-                  }}
-                >
+      <ScrollAnimation
+        animateIn="flipInX"
+        animateOnce={true}
+        style={{ width: "100%" }}
+      >
+        <Container>
+          <LeftSection>
+            <ContactContainer>
+              <Title> Contact Information </Title>
+              <SubContainer>
+                <Icons src={Phone} alt="phone" />
+                <Text>Phone: (415) 858-5179 </Text>
+              </SubContainer>
+              <SubContainer>
+                <Icons src={Email} alt="Email" />
+                <a href="mailto:diaz4674@gmail.com">
                   {" "}
-                  Github{" "}
-                </p>
-              </NewTab>
-            </IconContainer>
-            <IconContainer
-              onMouseEnter={this.toggleLinkedIn}
-              onMouseLeave={this.toggleLinkedIn}
-            >
-              <NewTab
-                target="_blank"
-                href="https://www.linkedin.com/in/diaz4674/"
-                style={{ textDecoration: "none" }}
+                  <Text>Email: diaz4674@gmail.com</Text>{" "}
+                </a>
+              </SubContainer>
+            </ContactContainer>
+          </LeftSection>
+          <RightSection>
+            <Title>Social</Title>
+            <SocialIconContainer>
+              <IconContainer
+                onMouseEnter={this.toggleGit}
+                onMouseLeave={this.toggleGit}
               >
-                <img
-                  src={Linkedin}
-                  alt="Linkedin"
-                  style={{
-                    height: "2em",
-                    transition: "ease 0.3s",
-                    marginBottom: "10px",
-                    transform: this.state.linkedIn ? "scale(1.5, 1.5)" : ""
-                  }}
-                />
-                <p
-                  style={{
-                    fontSize: "20px",
-                    display: "flex",
-                    justifyContent: "center",
-                    fontFamily: "raleway-bold",
-                    color: "black",
-                    transition: "ease 0.3s",
-                    transform: this.state.linkedIn ? "scale(1.1, 1.1)" : ""
-                    // textShadow: this.state.linkedIn ? "1.5px 1.5px gray" : ""
-                  }}
+                <NewTab
+                  target="_blank"
+                  href="https://github.com/diaz4674"
+                  style={{ textDecoration: "none" }}
                 >
-                  {" "}
-                  LinkedIn{" "}
-                </p>
-              </NewTab>
-            </IconContainer>
-          </SocialIconContainer>
-        </RightSection>
-      </Container>
+                  <img
+                    src={Git}
+                    alt="Github"
+                    style={{
+                      height: "2em",
+                      transition: "ease 0.3s",
+                      marginBottom: "10px",
+                      transform: this.state.Github ? "scale(1.5, 1.5)" : ""
+                    }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "20px",
+                      display: "flex",
+                      justifyContent: "center",
+                      fontFamily: "raleway-bold",
+                      color: "black",
+                      transition: "ease 0.3s",
+                      transform: this.state.Github ? "scale(1.1, 1.1)" : ""
+                      // textShadow: this.state.Github ? "1.5px 1.5px gray" : ""
+                    }}
+                  >
+                    {" "}
+                    Github{" "}
+                  </p>
+                </NewTab>
+              </IconContainer>
+              <IconContainer
+                onMouseEnter={this.toggleLinkedIn}
+                onMouseLeave={this.toggleLinkedIn}
+              >
+                <NewTab
+                  target="_blank"
+                  href="https://www.linkedin.com/in/diaz4674/"
+                  style={{ textDecoration: "none" }}
+                >
+                  <img
+                    src={Linkedin}
+                    alt="Linkedin"
+                    style={{
+                      height: "2em",
+                      transition: "ease 0.3s",
+                      marginBottom: "10px",
+                      transform: this.state.linkedIn ? "scale(1.5, 1.5)" : ""
+                    }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "20px",
+                      display: "flex",
+                      justifyContent: "center",
+                      fontFamily: "raleway-bold",
+                      color: "black",
+                      transition: "ease 0.3s",
+                      transform: this.state.linkedIn ? "scale(1.1, 1.1)" : ""
+                      // textShadow: this.state.linkedIn ? "1.5px 1.5px gray" : ""
+                    }}
+                  >
+                    {" "}
+                    LinkedIn{" "}
+                  </p>
+                </NewTab>
+              </IconContainer>
+            </SocialIconContainer>
+          </RightSection>
+        </Container>
+      </ScrollAnimation>
     );
   }
 }
