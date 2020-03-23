@@ -6,16 +6,33 @@ import Test from "../LandingVideos/vid2.mp4";
 
 // Projects Card Container that is a react-bootstrap Carousel
 class Projects extends React.Component {
+  componentDidMount = () => {
+    this.playVideo();
+  };
+
+  componentWillUnmount = () => {
+    this.pauseVideo();
+  };
+
+  playVideo = () => {
+    // plays video when component mounts
+    this.refs.vidRef.play();
+  };
+
+  pauseVideo = () => {
+    // Pauses video when component unmounts
+    this.refs.vidRef.pause();
+  };
+
   render() {
     return (
       <Container>
-        <Carousel onSelect={this.handleSelect}>
-          <Carousel.Item
-            interval={false}
-            data-interval={false}
-            className="carousel"
-            indicators={false}
-          >
+        <Carousel
+          onSelect={this.handleSelect}
+          interval={false}
+          data-interval={false}
+        >
+          <Carousel.Item className="carousel" indicators={false}>
             <VideoContainer>
               <Title> Legends of Alabastra </Title>
               <Video
@@ -82,9 +99,10 @@ class Projects extends React.Component {
                 // controls
               />
               <Description
-                description="A site where users may store their favorite sites all in one place, and browse by sections to view their saved sites."
-                tech=" React | React Hooks | Redux | CSS3 | Material-UI Framework |
-                Express | SQLite3 | Axios | Bcryptjs "
+                description="A site where users may store their favorite sites all
+              in one place, and browse by sections to view their saved sites."
+                tech=" React | React Hooks | Redux | CSS3 | Material-UI Framework
+              | Express | SQLite3 | Axios | Bcryptjs "
                 link="https://quizzical-blackwell-d608a3.netlify.com/"
                 gitrepo="https://github.com/diaz4674/BookMark"
               />

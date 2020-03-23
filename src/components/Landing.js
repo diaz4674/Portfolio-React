@@ -8,6 +8,7 @@ import Tech from "./TechSection/Tech";
 import Footer from "./Footer";
 import Topbar from "./NavBar";
 import BottomNav from "./BottomNav";
+import ScrollAnimation from "react-animate-on-scroll";
 
 // Header Video Style
 const Vid1 = {
@@ -26,20 +27,26 @@ class Landing extends Component {
           {/* ScrollableAnchor is used to navigate/auto scroll to the section once its selected
           from navbar */}
           <ScrollableAnchor id={"Home"}>
-            <Video1 style={Vid1} />
+            <ScrollAnimation animateIn="fadeIn">
+              <Video1 style={Vid1} />
+            </ScrollAnimation>
           </ScrollableAnchor>
           <AboutMeDiv>
-            <ScrollableAnchor id={"About_me"}>
-              <Title> About Me </Title>
-            </ScrollableAnchor>
-            <AboutMeCoreDiv>
-              <Tech />
-              <AboutMe />
-            </AboutMeCoreDiv>
+            <ScrollAnimation animateIn="fadeIn">
+              <ScrollableAnchor id={"About_me"}>
+                <Title> About Me </Title>
+              </ScrollableAnchor>
+              <AboutMeCoreDiv>
+                <Tech />
+                <AboutMe />
+              </AboutMeCoreDiv>
+            </ScrollAnimation>
           </AboutMeDiv>
-          <ProjectsDiv>
-            <Projects />
-          </ProjectsDiv>
+          <ScrollAnimation animateIn="fadeIn">
+            <ProjectsDiv>
+              <Projects />
+            </ProjectsDiv>
+          </ScrollAnimation>
           <ScrollableAnchor id={"Contact"}>
             <Footer />
           </ScrollableAnchor>
