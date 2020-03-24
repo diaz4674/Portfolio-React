@@ -54,6 +54,7 @@ class Landing extends Component {
             animateIn="fadeIn"
             animateOut="fadeOut"
             animateOnce={true}
+            style = {{width: "100%"}}
           >
             <ProjectsDiv>
               <Projects />
@@ -124,6 +125,7 @@ const ProjectsDiv = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 50px 0;
+  width: 100%;
   background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%);
 `;
 
