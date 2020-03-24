@@ -5,6 +5,8 @@ import Description from "./Description";
 import Test from "../LandingVideos/vid2.mp4";
 import BookmarkDemo from '../DemoVideos/bookmarkDemo.mp4'
 import SAM from '../DemoVideos/SAM.mp4'
+import Alabastra from '../DemoVideos/Alabastra.mp4'
+
 // Projects Card Container that is a react-bootstrap Carousel
 class Projects extends React.Component {
   componentDidMount = () => {
@@ -34,27 +36,6 @@ class Projects extends React.Component {
           data-interval={false}
           indicators={false}
         >
-          <Carousel.Item className="carousel">
-            <VideoContainer>
-              <Title> Legends of Alabastra </Title>
-              <Video
-                ref="vidRef"
-                onEnded={this.switchVideo}
-                src={Test}
-                type="video/mp4"
-                loop
-                autoPlay
-                playsInline
-                muted
-              />
-              <Description
-                description="A pirate adventure game where the user competes with other players to be the most feared pirate"
-                tech=" Python | Django | PostgreSQL | Pusher | React "
-                link="https://hungry-spence-d1d30a.netlify.com/"
-                gitrepo="https://github.com/diaz4674/BookMark"
-              />
-            </VideoContainer>
-          </Carousel.Item>
           <Carousel.Item className="carousel">
             <VideoContainer>
               <Title> LyftQuest </Title>
@@ -96,6 +77,27 @@ class Projects extends React.Component {
               | Express | SQLite3 | Axios | Bcryptjs "
                 link="https://quizzical-blackwell-d608a3.netlify.com/"
                 gitrepo="https://github.com/diaz4674/BookMark"
+              />
+            </VideoContainer>
+          </Carousel.Item>
+          <Carousel.Item className="carousel">
+            <VideoContainer>
+              <Title> Legends of Alabastra </Title>
+              <Video
+                ref="vidRef"
+                onEnded={this.switchVideo}
+                src={Alabastra}
+                type="video/mp4"
+                loop
+                autoPlay
+                playsInline
+                muted
+              />
+              <Description
+                description="A pirate adventure game where the user competes with other players to be the most feared pirate"
+                tech=" Python | Django | PostgreSQL | Pusher | React "
+                link="https://hungry-spence-d1d30a.netlify.com/"
+                gitrepo="https://github.com/legends-of-alabastra"
               />
             </VideoContainer>
           </Carousel.Item>
