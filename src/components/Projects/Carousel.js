@@ -10,21 +10,21 @@ import Alabastra from '../DemoVideos/Alabastra.mp4'
 // Projects Card Container that is a react-bootstrap Carousel
 class Projects extends React.Component {
   componentDidMount = () => {
-    this.playVideo();
+
   };
 
   componentWillUnmount = () => {
     this.pauseVideo();
   };
 
-  playVideo = () => {
+  playVideo = (e) => {
     // plays video when component mounts
-    this.refs.vidRef.play();
+    e.target.play();
   };
 
-  pauseVideo = () => {
+  pauseVideo = (e) => {
     // Pauses video when component unmounts
-    this.refs.vidRef.pause();
+    e.target.pause();
   };
 
   render() {
@@ -45,7 +45,8 @@ class Projects extends React.Component {
                 src={Test}
                 type="video/mp4"
                 loop
-                autoPlay
+                onMouseOver={this.playVideo}
+                onMouseOut={this.pauseVideo}
                 playsInline
                 muted
               />
@@ -66,7 +67,8 @@ class Projects extends React.Component {
                 src={BookmarkDemo}
                 type="video/mp4"
                 loop
-                autoPlay
+                onMouseOver={this.playVideo}
+                onMouseOut={this.pauseVideo}
                 playsInline
                 muted
               />
@@ -89,7 +91,8 @@ class Projects extends React.Component {
                 src={Alabastra}
                 type="video/mp4"
                 loop
-                autoPlay
+                onMouseOver={this.playVideo}
+                onMouseOut={this.pauseVideo}
                 playsInline
                 muted
               />
@@ -110,7 +113,8 @@ class Projects extends React.Component {
                 src={SAM}
                 type="video/mp4"
                 loop
-                autoPlay
+                onMouseOver={this.playVideo}
+                onMouseOut={this.pauseVideo}
                 playsInline
                 muted
               />
