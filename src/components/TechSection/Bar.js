@@ -57,6 +57,15 @@ const Progress = styled.div`
   z-index: 2;
   border: 0.5px black solid;
   background-color: #f5bd07;
+  @keyframes colorChange {
+    0% {
+      background-color: #f5bd07;
+    }
+    100% {
+      background-color: #f6ff6e;
+    }
+  }
+  animation: colorChange 3s ease infinite alternate-reverse;
 `;
 
 export default Bar;
