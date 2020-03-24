@@ -3,7 +3,8 @@ import Carousel from "react-bootstrap/Carousel";
 import styled from "styled-components";
 import Description from "./Description";
 import Test from "../LandingVideos/vid2.mp4";
-
+import BookmarkDemo from '../DemoVideos/bookmarkDemo.mp4'
+import SAM from '../DemoVideos/SAM.mp4'
 // Projects Card Container that is a react-bootstrap Carousel
 class Projects extends React.Component {
   componentDidMount = () => {
@@ -81,7 +82,7 @@ class Projects extends React.Component {
               <Video
                 ref="vidRef"
                 onEnded={this.switchVideo}
-                src={Test}
+                src={BookmarkDemo}
                 type="video/mp4"
                 loop
                 autoPlay
@@ -104,7 +105,7 @@ class Projects extends React.Component {
               <Video
                 ref="vidRef"
                 onEnded={this.switchVideo}
-                src={Test}
+                src={SAM}
                 type="video/mp4"
                 loop
                 autoPlay
