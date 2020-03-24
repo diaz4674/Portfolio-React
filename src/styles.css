@@ -25,6 +25,13 @@ body {
   visibility: hidden;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: black;
+  height: 5%;
+  top: 40%;
+}
+
 /* Hamburger navigation hover effect to navigate sections */
 .hamburger {
   width: 3em;
