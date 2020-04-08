@@ -137,7 +137,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 30px black;
-  width: 75%;
+  width: 70%;
 
   @media (max-width: 600px) {
     width: 100%;

@@ -12,7 +12,6 @@ body {
 }
 
 /* Loading screen dots animation */
-/*Huge thanks to @tobiasahlin at http://tobiasahlin.com/spinkit/ */
 .spinner {
   /* margin: 100px auto 0; */
   width: 70px;
