@@ -7,7 +7,8 @@ import VideoTwo from "./LandingVideos/vid2.mp4";
 class Video1 extends React.Component {
   state = {
     //State toggler to swap videos being rendered
-    video1Finished: false
+    video1Finished: false,
+    loading: true
   };
   componentDidMount = () => {
     // this.playVideo();
@@ -41,8 +42,8 @@ class Video1 extends React.Component {
       //Intro video that hides after it finishes and toggles the state
       zIndex: this.state.video1Finished ? "0" : "2",
       opacity: this.state.video1Finished ? "0" : "1",
-      width: "100%",
-      transition: "ease .1s"
+      width: "100%"
+      // transition: "ease .1s"
     };
 
     const Video2 = {
@@ -59,7 +60,6 @@ class Video1 extends React.Component {
           // Second part of video that has the continuous looponce all images settle
           style={Video2}
           ref="vidRef"
-          onEnded={this.switchVideo}
           src={VideoTwo}
           type="video/mp4"
           loop
@@ -77,6 +77,7 @@ class Video1 extends React.Component {
           autoPlay
           playsInline
           muted
+          onLoadedData={this.props.start}
         />
       </Container>
     );

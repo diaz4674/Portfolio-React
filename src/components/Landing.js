@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Topbar from "./NavBar";
 import BottomNav from "./BottomNav";
 import ScrollAnimation from "react-animate-on-scroll";
-
+import Loading from "./Loading";
 // Header Video Style
 const Vid1 = {
   width: "100%",
@@ -17,24 +17,34 @@ const Vid1 = {
 };
 
 class Landing extends Component {
+  state = {
+    loading: true
+  };
+
+  start = async () => {
+    await this.setState({ loading: false });
+  };
   render() {
+    const Container = {
+      height: this.state.loading ? "100vh" : "",
+      overflow: this.state.loading ? "hidden" : "visible",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center"
+    };
+
     return (
-      <>
+      <div style={Container}>
+        <Loading loading={this.state.loading} />
         <Head>
-          <Topbar />
+          <ScrollableAnchor id={"Home"}>
+            <Topbar />
+          </ScrollableAnchor>
         </Head>
         <Body>
           {/* ScrollableAnchor is used to navigate/auto scroll to the section once its selected
           from navbar */}
-          <ScrollableAnchor id={"Home"}>
-            <ScrollAnimation
-              animateIn="fadeIn"
-              animateOut="fadeOut"
-              animateOnce={true}
-            >
-              <Video1 style={Vid1} />
-            </ScrollAnimation>
-          </ScrollableAnchor>
+          <Video1 style={Vid1} start={this.start} />
           <AboutMeDiv>
             <ScrollAnimation
               animateIn="bounceInRight"
@@ -54,7 +64,6 @@ class Landing extends Component {
             animateIn="fadeIn"
             animateOut="fadeOut"
             animateOnce={true}
-            style = {{width: "100%"}}
           >
             <ProjectsDiv>
               <Projects />
@@ -65,7 +74,7 @@ class Landing extends Component {
           </ScrollableAnchor>
           <BottomNav />
         </Body>
-      </>
+      </div>
     );
   }
 }
@@ -125,7 +134,6 @@ const ProjectsDiv = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 50px 0;
-  width: 100%;
   background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%);
 `;
 
