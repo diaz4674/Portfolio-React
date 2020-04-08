@@ -64,6 +64,7 @@ class Landing extends Component {
             animateIn="fadeIn"
             animateOut="fadeOut"
             animateOnce={true}
+            style = {{width: "100%" }}
           >
             <ProjectsDiv>
               <Projects />
