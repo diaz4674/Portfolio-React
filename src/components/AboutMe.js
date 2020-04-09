@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Us from "../images/us4.0.png"
 
 class AboutMe extends Component {
   render() {
@@ -8,25 +9,18 @@ class AboutMe extends Component {
         <AboutText>
           <Title>Welcome!</Title>
           <Text>
-            I am a Full Stack Engineer that loves to focus on creating
+            I am a Full Stack Engineer that enjoys to focus on
             aesthetically pleasing colors, themes, and animations to generate a
             strong user interface. I enjoy building a healthy working
-            relationship with people, by communicating, building rapport, and
+            relationship with people by communicating, building rapport, and
             organizing to build an effective work flow.
           </Text>
           <Text>
             In the next five years, I am hoping to gain enough experience to be
             considered a Senior Software Engineer.
           </Text>
-
-          <Text>
-            {" "}
-            Hobbies include 3D modeling designs and printing them out with my 3D
-            printer, as well as spending time with my wife & two cats. I have a
-            passion for learning, and spend time in Udemy to learn other skills,
-            such as the Adobe products that helped build this site.
-          </Text>
         </AboutText>
+        <FamilyImg src = {Us} alt = "Miguel, Pregnant wife, and pets"/>
       </Container>
     );
   }
@@ -36,24 +30,25 @@ class AboutMe extends Component {
 const Container = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 90%;
   flex-wrap: wrap;
-  padding-right: 5%;
+  margin-right: 5%;
+  box-shadow: 0px 4px 30px black;
+  background-color: #eef1ff;
+  padding: 25px;
 
   @media (max-width: 1230px) {
-    padding-right: 0;
+
     margin: 25px 0 80px;
   }
 `;
 
 const AboutText = styled.div`
-  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   height: auto;
-  background-color: #eef1ff;
-  box-shadow: 0px 4px 30px black;
 `;
 
 const Title = styled.p`
@@ -70,12 +65,21 @@ const Title = styled.p`
 
 const Text = styled.p`
   font-size: 18px;
-  padding: 10px;
+  padding: 5px;
   display: flex;
   font-weight: 900;
   justify-content: center;
   font-family: "raleway-bold";
   text-transform: uppercase;
 `;
+
+const FamilyImg = styled.img `
+  width: 35em;
+  display: flex;
+  margin: auto;
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+`
 
 export default AboutMe;
