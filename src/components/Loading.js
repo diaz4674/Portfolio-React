@@ -49,10 +49,12 @@ class Loading extends React.Component {
         <div style={Flexboxing}>
           <img
             style={LoadingIcon}
+            // Flying Taco
             src="https://media.giphy.com/media/kELXPGMOmmCLxhMr6R/giphy.gif"
             alt="loading"
           />
           <div style={LoadingWordContainer}>
+            {/* Bouncing loading dots */}
             <p style={loadingWord}> Loading </p>
             <div class="spinner">
               <div class="bounce1" />
