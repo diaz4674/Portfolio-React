@@ -54,23 +54,21 @@ const AboutText = styled.div`
 const Title = styled.p`
   font-size: 47px;
   font-weight: 900;
-  color: #f6c102;
-  font-family: Bangers;
+  color: black;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 2px;
-  -webkit-text-stroke: 0.2px black;
   display: flex;
   justify-content: flex-start;
   text-transform: uppercase;
 `;
 
 const Text = styled.p`
-  font-size: 18px;
+  font-size: 20px;
   padding: 5px;
   display: flex;
-  font-weight: 900;
+  // font-weight: 800;
   justify-content: center;
-  font-family: "raleway-bold";
-  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
 `;
 
 const FamilyImg = styled.img `
