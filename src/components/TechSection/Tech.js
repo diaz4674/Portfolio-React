@@ -90,6 +90,7 @@ const TechDiv = styled.div`
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 53px 0;
 `;
 const TitleDiv = styled.div`
   display: flex;

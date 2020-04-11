@@ -7,9 +7,11 @@ class Bar extends Component {
     return (
       <>
         <Container>
-          <Text> {this.props.name} </Text>
+          
           <OuterBar>
-            <Progress />
+            <Progress >
+              <Text> {this.props.name} </Text>
+            </Progress>
           </OuterBar>
         </Container>
       </>
@@ -26,13 +28,15 @@ const Container = styled.div`
 `;
 
 const Text = styled.p`
+  width: 100%;
   color: black;
-  font-size: 25px;
+  font-size: 21px;
   display: flex;
   font-weight: 900;
   justify-content: center;
   font-family: "raleway-bold";
   text-transform: uppercase;
+  margin: 0;
 `;
 
 const OuterBar = styled.div`
@@ -57,6 +61,9 @@ const Progress = styled.div`
   z-index: 2;
   border: 0.5px black solid;
   background-color: #f5bd07;
+  display: flex;
+  align-items: center;
+  margin: auto;
   @keyframes colorChange {
     0% {
       background-color: #f5bd07;

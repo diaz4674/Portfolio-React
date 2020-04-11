@@ -95,7 +95,7 @@ body {
 }
 
 .this {
-  z-index: 0;
+  z-index: 10;
   position: fixed;
   background-color: #e2e2e2;
   border-radius: 50px;
