@@ -105,7 +105,7 @@ const Title = styled.p`
   margin: 0;
 `;
 const Img = styled.img`
-  width: 5em;
+  width: 80px;
   display: flex;
   margin-right: 20px;
   justify-content: center;
