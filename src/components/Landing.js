@@ -26,7 +26,7 @@ class Landing extends Component {
   };
   render() {
     const Container = {
-      height: this.state.loading ? "100vh" : "",
+      height: this.state.loading ? "100%" : "",
       overflow: this.state.loading ? "hidden" : "visible",
       display: "flex",
       flexDirection: "column",
