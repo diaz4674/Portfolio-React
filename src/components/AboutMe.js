@@ -16,8 +16,8 @@ class AboutMe extends Component {
             organizing to build an effective work flow.
           </Text>
           <Text>
-            In the next five years, I am hoping to gain enough experience to be
-            considered a Senior Software Engineer.
+            In these coming years, I hope to be a Senior Software Engineer, mentor
+            incoming developers to help make an effiecient, and positive environment.
           </Text>
         </AboutText>
         <FamilyImg src = {Us} alt = "Miguel, Pregnant wife, and pets"/>
@@ -35,7 +35,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   margin-right: 5%;
   box-shadow: 0px 4px 30px black;
-  background-color: #eef1ff;
+  background-color: #FFDC74;
   padding: 25px;
 
   @media (max-width: 1230px) {
@@ -55,7 +55,7 @@ const Title = styled.p`
   font-size: 47px;
   font-weight: 900;
   color: black;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bangers';
   letter-spacing: 2px;
   display: flex;
   justify-content: flex-start;
@@ -68,16 +68,22 @@ const Text = styled.p`
   display: flex;
   // font-weight: 800;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bangers';
+  letter-spacing: 1px;
 `;
 
 const FamilyImg = styled.img `
-  width: 35em;
-  display: flex;
-  margin: auto;
-  @media (max-width: 650px) {
-    width: 100%;
-  }
+    width: 35em;
+    display: flex;
+    margin: auto;
+    padding: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 15px gray;
+    border-radius: 10px;
+    
+    @media (max-width: 650px) {
+        width: 100%;
+    }
 `
 
 export default AboutMe;
