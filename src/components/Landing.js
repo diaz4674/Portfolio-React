@@ -18,11 +18,11 @@ const Vid1 = {
 
 class Landing extends Component {
   state = {
-    loading: false
+    loading: true
   };
 
   start = async () => {
-    // await this.setState({ loading: false });
+    await this.setState({ loading: false });
   };
   render() {
     const Container = {
