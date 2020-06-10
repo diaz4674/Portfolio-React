@@ -109,6 +109,7 @@ const Img = styled.img`
   display: flex;
   margin-right: 20px;
   justify-content: center;
+  -webkit-text-size-adjust:none;
 `;
 const BataRangIcon = styled.img`
   width: 8em;
