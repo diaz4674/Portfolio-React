@@ -1,5 +1,9 @@
 import React from "react";
 // import Description from "./Description";
+import Git from "../../icons/Git.png";
+import Linkedin from "../../icons/linkedin.png";
+import BatmanLego from "../../images/BatmanLego.jpg";
+import Profile from "../../images/profile.jpg";
 import BookmarkDemo from "../DemoVideos/bookmarkDemo.mp4";
 import SAM from "../DemoVideos/SAM.mp4";
 // import Alabastra from "../DemoVideos/Alabastra.mp4";
@@ -85,18 +89,11 @@ class Professional extends React.Component {
 								style={{ textDecoration: "none" }}
 							>
 								{" "}
-								<img
-									src="images/githubIcon.png"
-									alt="Github Icon"
-									className="githubIcon"
-								/>{" "}
+								<img src={Git} alt="Github Icon" className="githubIcon" />{" "}
 							</a>
-							<a
-								href="https://www.linkedin.com/in/miguel-diaz-a2114512a"
-								target="_blank"
-							>
+							<a href="https://www.linkedin.com/in/diaz4674/" target="_blank">
 								<img
-									src="images/linkedInIcon.png"
+									src={Linkedin}
 									alt="LinkedIn Icon"
 									className="linkedinIcon"
 								/>{" "}
@@ -107,14 +104,10 @@ class Professional extends React.Component {
 				<div className="bodyContainer">
 					<div className="shadedColor">
 						<div className="img-top">
-							<img
-								src="images/BatmanLego.jpg"
-								alt=""
-								className="header-video"
-							/>
+							<img src={BatmanLego} alt="" className="header-video" />
 						</div>
 						<div className="headerText">
-							<img src="images/profile.jpg" alt="" className="profileImg" />
+							<img src={Profile} alt="" className="profileImg" />
 							<h1 className="my-name"> Miguel Diaz</h1>
 							<p className="full-stack"> Full Stack Developer</p>
 						</div>
@@ -361,7 +354,7 @@ class Professional extends React.Component {
 											style={{ textDecoration: "none" }}
 										>
 											<img
-												src="https://image.flaticon.com/icons/png/512/61/61109.png"
+												src={Linkedin}
 												alt="LinkedIn Icon"
 												className="linkedinIcon"
 											/>
