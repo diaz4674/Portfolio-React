@@ -4,14 +4,40 @@ import Git from "../../icons/Git.png";
 import Linkedin from "../../icons/linkedin.png";
 import BatmanLego from "../../images/BatmanLego.jpg";
 import Profile from "../../images/profile.jpg";
-import BookmarkDemo from "../DemoVideos/bookmarkDemo.mp4";
-import SAM from "../DemoVideos/SAM.mp4";
+import { withRouter } from "react-router-dom";
 // import Alabastra from "../DemoVideos/Alabastra.mp4";
 import ProjectCarousel from "../Projects/Projects";
-import Lyftquest from "../DemoVideos/Liftquest.mp4";
 import "./style.css";
 
 class Professional extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	componentDidMount() {
+		if (localStorage.getItem("theme") === "bat-theme") {
+			this.setTheme("bat-theme");
+			document.getElementById("slider").checked = false;
+		} else {
+			this.setTheme("theme-professional");
+			document.getElementById("slider").checked = true;
+		}
+	}
+	setTheme(themeName) {
+		localStorage.setItem("theme", themeName);
+		document.documentElement.className = themeName;
+	}
+	toggleTheme(e) {
+		e.preventDefault();
+		console.log("hi");
+		if (localStorage.getItem("theme") === "bat-theme") {
+			this.setTheme("theme-professional");
+			this.props.history.push("/creativeMode");
+		} else {
+			this.setTheme("bat-theme");
+			this.props.history.push("/");
+		}
+		console.log(localStorage.getItem("theme"));
+	}
 	render() {
 		return (
 			<div>
@@ -99,6 +125,14 @@ class Professional extends React.Component {
 									className="linkedinIcon"
 								/>{" "}
 							</a>
+							<label id="switch" class="switch">
+								<input
+									type="checkbox"
+									onClick={this.toggleTheme.bind(this)}
+									id="slider"
+								/>
+								<span class="slider round"></span>
+							</label>
 						</div>
 					</div>
 				</nav>
@@ -110,14 +144,14 @@ class Professional extends React.Component {
 						<div className="headerText">
 							<img src={Profile} alt="" className="profileImg" />
 							<h1 className="my-name"> Miguel Diaz</h1>
-							<p className="full-stack"> Full Stack Developer</p>
+							<p className="full-stack"> Software Engineer</p>
 						</div>
 					</div>
 				</div>
 				<div className="aboutContainer" id="aboutMe">
 					<h2> About Me</h2>
 					<p>
-						I am a Full Stack Developer that loves to focus on creating
+						I am a Software Engineer that loves to focus on creating
 						aesthetically pleasing colors, themes, and animations to generate a
 						strong user interface. I also enjoy working with the backend to help
 						make a smooth transition and seeing the Restful API’s successfully
@@ -238,4 +272,4 @@ class Professional extends React.Component {
 	}
 }
 
-export default Professional;
+export default withRouter(Professional);

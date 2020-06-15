@@ -23,9 +23,8 @@ class Projects extends React.Component {
 			? this.setState({
 					proMode: false,
 					font: "raleway-bold",
-					background: "red",
 			  })
-			: this.setState({ proMode: false, font: "Bangers", background: "blue" });
+			: this.setState({ proMode: false, font: "Bangers" });
 	}
 
 	render() {
