@@ -37,7 +37,7 @@ class Landing extends Component {
 			<div style={Container}>
 				<Loading loading={this.state.loading} />
 				<Head>
-					<ScrollableAnchor id={"Home"}>
+					<ScrollableAnchor id={"Top"}>
 						<Topbar />
 					</ScrollableAnchor>
 				</Head>

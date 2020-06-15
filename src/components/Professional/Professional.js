@@ -7,7 +7,7 @@ import Profile from "../../images/profile.jpg";
 import { withRouter } from "react-router-dom";
 // import Alabastra from "../DemoVideos/Alabastra.mp4";
 import ProjectCarousel from "../Projects/Projects";
-import "./style.css";
+import "./professionalStyles.css";
 
 class Professional extends React.Component {
 	constructor(props) {
@@ -116,14 +116,10 @@ class Professional extends React.Component {
 								style={{ textDecoration: "none" }}
 							>
 								{" "}
-								<img src={Git} alt="Github Icon" className="githubIcon" />{" "}
+								<img src={Git} alt="Github Icon" className="navIcons" />{" "}
 							</a>
 							<a href="https://www.linkedin.com/in/diaz4674/" target="_blank">
-								<img
-									src={Linkedin}
-									alt="LinkedIn Icon"
-									className="linkedinIcon"
-								/>{" "}
+								<img src={Linkedin} alt="LinkedIn Icon" className="navIcons" />{" "}
 							</a>
 							<label id="switch" class="switch">
 								<input

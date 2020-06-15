@@ -23,8 +23,8 @@ class BottomNav extends React.Component {
 	render() {
 		return (
 			<NavBottom id="scrollButton">
-				<div className="this">
-					<Text href="#Home"> Home </Text>
+				<div className="thisNav">
+					<Text href="#Top"> Home </Text>
 					<Text href="#About_me"> About </Text>
 					<Text href="#Projects"> Projects</Text>
 					<Text href="#Contact"> Contact </Text>

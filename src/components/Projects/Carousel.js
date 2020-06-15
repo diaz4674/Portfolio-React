@@ -24,19 +24,20 @@ class Projects extends React.Component {
 			  });
 	};
 
-	componentWillUnmount = () => {
-		this.pauseVideo();
-	};
+	// componentWillUnmount = () => {
+	// 	this.pauseVideo();
+	// };
 
 	playVideo = (e) => {
 		// plays video when component mounts
 		e.target.play();
 	};
 
-	pauseVideo = (e) => {
-		// Pauses video when component unmounts
-		e.target.pause();
-	};
+	// pauseVideo = (e) => {
+	// 	e.preventDefault();
+	// 	// Pauses video when component unmounts
+	// 	e.target.pause();
+	// };
 
 	render() {
 		let { font, proMode } = this.state;

@@ -141,9 +141,8 @@ a.nav-link {
 	font-size: 20px;
 }
 
-img.githubIcon,
-img.linkedinIcon {
-	width: 2em;
+img.navIcons {
+	width: 40px;
 	margin: 15px;
 	transition: 0.3s;
 }
@@ -152,10 +151,9 @@ a {
 	text-decoration: none;
 }
 
-img.githubIcon:hover,
-img.linkedinIcon:hover {
+img.navIcons:hover {
 	transition: 0.3s ease;
-	transform: scale(1.3, 1.3);
+	transform: scale(1.2, 1.2);
 }
 
 video {

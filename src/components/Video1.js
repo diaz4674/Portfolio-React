@@ -14,19 +14,20 @@ class Video1 extends React.Component {
 		// this.playVideo();
 	};
 
-	componentWillUnmount = () => {
-		this.pauseVideo();
-	};
+	// componentWillUnmount = () => {
+	// 	this.pauseVideo();
+	// };
 
 	playVideo = () => {
 		// plays video when component mounts
 		this.refs.vidRef.play();
 	};
 
-	pauseVideo = () => {
-		// Pauses video when component unmounts
-		this.refs.vidRef.pause();
-	};
+	// pauseVideo = (e) => {
+	// 	e.preventDefault();
+	// 	// Pauses video when component unmounts
+	// 	this.refs.vidRef.pause();
+	// };
 	switchVideo = async () => {
 		//When First video ends, switches to second video which is capable
 		//of renerding a seamless continuous loop of the waves and flowing cape
