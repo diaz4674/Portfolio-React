@@ -7,6 +7,7 @@ import Profile from "../../images/profile.jpg";
 import BookmarkDemo from "../DemoVideos/bookmarkDemo.mp4";
 import SAM from "../DemoVideos/SAM.mp4";
 // import Alabastra from "../DemoVideos/Alabastra.mp4";
+import ProjectCarousel from "../Projects/Projects";
 import Lyftquest from "../DemoVideos/Liftquest.mp4";
 import "./style.css";
 
@@ -172,142 +173,8 @@ class Professional extends React.Component {
 					</div>
 				</div>
 				<div className="projectsContainer" id="projectsSection">
-					<h1 className="projects-title">Projects</h1>
-					<medium className="projects-text-muted">
-						Hover over images to start demo video.
-					</medium>
-					<div className="projectCards">
-						{/* Carousel slider */}
-						<div id="demo" className="carousel slide" data-ride="carousel">
-							{/* The slideshow */}
-							<div className="carousel-inner">
-								<div className="carousel-item active ">
-									<div className="project-slide">
-										<p className="project-title"> BookMark </p>
-										<video
-											playsInline="playsinline"
-											muted="muted"
-											loop="loop"
-											className="project-video"
-											poster="https://codepen.io/theElkman/pen/aNyeoL/image/large.png"
-										>
-											<source src={BookmarkDemo} type="video/mp4" />
-										</video>
-										<div className="project-description">
-											<h4>Summary</h4>
-											<p>
-												A site where users may store their favorite sites all in
-												one place, and browse by sections to view their saved
-												sites.
-											</p>
-											<h4>Tech Stack</h4>
-											<p>
-												React | React Hooks | Redux | CSS3 | Material-UI
-												Framework | Express | SQLite3 | Axios | Bcryptjs{" "}
-											</p>
-										</div>
-										<div className="button-container">
-											<a
-												href="https://quizzical-blackwell-d608a3.netlify.com/"
-												target="_blank"
-											>
-												<button className="this">Live Site</button>
-											</a>
-											<a
-												href="https://github.com/diaz4674/BookMark/tree/master/FE-BookMark"
-												target="_blank"
-											>
-												<button className="this">Github Repo</button>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div className="carousel-item">
-									<div className="project-slide">
-										<p className="project-title"> Stay at Home Moms </p>
-										<video
-											playsInline="playsinline"
-											muted="muted"
-											loop="loop"
-											className="project-video"
-											poster="https://codepen.io/theElkman/pen/aNyeoL/image/large.png"
-										>
-											<source src={SAM} type="video/mp4" />
-										</video>
-										<div className="project-description">
-											<h4>Summary</h4>
-											<p>
-												A meet up app for stay at home moms to create/attend
-												events with other stay at home moms to create a
-												supportive and communal community.
-											</p>
-											<h4>Tech Stack</h4>
-											<p>
-												{" "}
-												React | Redux | React Bootstrap | CSS3 | Axios | Git{" "}
-											</p>
-										</div>
-										<div className="button-container">
-											<a
-												href="https://ecstatic-boyd-937833.netlify.com/"
-												target="_blank"
-											>
-												<button className="this">Live Site</button>
-											</a>
-											<a
-												href="https://github.com/a-to-z-experiences-team/build-aToz-FE"
-												target="_blank"
-											>
-												<button className="this">Github Repo</button>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div className="carousel-item">
-									<div className="project-slide">
-										<p className="project-title"> Adobe Skills </p>
-										<video
-											playsInline="playsinline"
-											muted="muted"
-											loop="loop"
-											className="project-video"
-											poster="https://codepen.io/theElkman/pen/aNyeoL/image/large.png"
-										>
-											<source src={Lyftquest} type="video/mp4" />
-										</video>
-										<div className="project-description">
-											<h4>Summary</h4>
-											<p>
-												Utilized Adobe Suite to produce better UI/UX experiences
-												for sites
-											</p>
-											<h4>Adobe Stack</h4>
-											<p> Illustrator | Premiere | Photoshop | Adobe XD </p>
-										</div>
-									</div>
-								</div>
-							</div>
-							{/* Left and right controls */}
-							<a
-								className="carousel-control-prev"
-								href="#demo"
-								data-slide="prev"
-							>
-								<span className="carousel-control-prev-icon" />
-							</a>
-							<a
-								className="carousel-control-next"
-								href="#demo"
-								data-slide="next"
-							>
-								<span className="carousel-control-next-icon" />
-							</a>
-						</div>
-					</div>
+					<ProjectCarousel mode="proMode" />
 				</div>
-				{/* Optional JavaScript */}
-				{/* jQuery first, then Popper.js, then Bootstrap JS */}
-				{/* Links to custom JavaScript */}
 				<footer>
 					<div className="card-body">
 						<div className="footerContainer" id="contactSection">

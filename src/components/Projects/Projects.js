@@ -1,65 +1,50 @@
 import React from "react";
-import styled from "styled-components";
 import Carousel from "./Carousel";
 import ScrollableAnchor from "react-scrollable-anchor";
-import Arrow from '../../icons/arrow.png'
+import Arrow from "../../icons/arrow.png";
+import {
+	Container,
+	AligningTitle,
+	Title,
+	HoverHelper,
+	DownArrow,
+	Text,
+} from "./_Style.js";
 
 class Projects extends React.Component {
-  render() {
-    return (
-      <Container>
-        <AligningTitle> 
-          <ScrollableAnchor id={"Projects"}>
-            <Title> Projects </Title>
-          </ScrollableAnchor>
-          <HoverHelper> 
-            <DownArrow src = {Arrow} alt = "arrow pointing down" />
-            <Text> hover video to play</Text>
-          </HoverHelper>
-        </AligningTitle>
-        <Carousel />
-      </Container>
-    );
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			proMode: true,
+		};
+	}
+	componentDidMount() {
+		this.props.mode === "proMode"
+			? this.setState({
+					proMode: false,
+					font: "raleway-bold",
+					background: "red",
+			  })
+			: this.setState({ proMode: false, font: "Bangers", background: "blue" });
+	}
+
+	render() {
+		let { font, proMode } = this.state;
+		return (
+			<Container>
+				<AligningTitle>
+					<ScrollableAnchor id={"Projects"}>
+						<Title mode={font}> Projects </Title>
+					</ScrollableAnchor>
+					<HoverHelper>
+						<DownArrow src={Arrow} alt="arrow pointing down" />
+						<Text mode={font}> hover video to play</Text>
+					</HoverHelper>
+				</AligningTitle>
+				<Carousel mode={proMode} />
+			</Container>
+		);
+	}
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-`;
-
-const AligningTitle = styled.div` 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-`
-const Title = styled.p`
-  color: black;
-  font-family: Bangers;
-  font-size: 68px;
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const HoverHelper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-right: 22px;
-`
-
-const DownArrow = styled.img`
-  height: 2.4em;
-  margin-right: 13px;
-`
-const Text = styled.p`
-  color: black;
-  font-family: Bangers;
-  font-size: 25px;
-  margin-bottom: 20px;
-`
 
 export default Projects;
