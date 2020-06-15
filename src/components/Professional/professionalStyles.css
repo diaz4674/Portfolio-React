@@ -248,7 +248,11 @@ div.headerText {
 .aboutContainer {
 	margin-top: 15px;
 	padding: 15px;
-	border-bottom: 0.8px solid #ebebeb;
+    position: absolute;
+
+    background: #FFFFFF;
+    box-shadow: 0px 3px 15px #E1E9F1;
+    border-radius: 10px;
 }
 
 .skills {

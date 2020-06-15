@@ -240,22 +240,22 @@ class Professional extends React.Component {
 											<img
 												src="https://camo.githubusercontent.com/7710b43d0476b6f6d4b4b2865e35c108f69991f3/68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67"
 												alt="Github Icon"
-												className="githubIcon"
+												className="navIcons"
 											/>
 											<p className="githubText"> Github </p>
 										</a>
 										<a
 											href="https://www.linkedin.com/in/miguel-diaz-a2114512a"
 											target="_blank"
-											className="linkedinAnchorFooter"
+											className="navIcons"
 											style={{ textDecoration: "none" }}
 										>
 											<img
 												src={Linkedin}
 												alt="LinkedIn Icon"
-												className="linkedinIcon"
+												className="navIcons"
 											/>
-											<p className="linkedinText"> Linkedin </p>
+											<p className="githubText"> Linkedin </p>
 										</a>
 									</div>
 								</div>
