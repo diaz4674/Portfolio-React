@@ -8,6 +8,14 @@ import { withRouter } from "react-router-dom";
 // import Alabastra from "../DemoVideos/Alabastra.mp4";
 import ProjectCarousel from "../Projects/Projects";
 import "./professionalStyles.css";
+import ScrollableAnchor from "react-scrollable-anchor";
+import { Navbar, Nav } from "react-bootstrap";
+import styled from "styled-components";
+
+const noUnderline = {
+	textDecoration: "none",
+	fontSize: "20px",
+};
 
 class Professional extends React.Component {
 	constructor(props) {
@@ -65,63 +73,55 @@ class Professional extends React.Component {
 					crossOrigin="anonymous"
 				/>
 				{/* NavBar */}
-				<nav className="navbar navbar-expand-lg navbar-light">
-					<a className="navbar-brand" href="#" style={{ color: "white" }}>
+                				<Navbar collapseOnSelect expand="lg" style={{ color: "white" }}>
+					<Navbar.Brand to="/" style={noUnderline}>
 						Miguel Diaz
-					</a>
-					<button
-						className="navbar-toggler"
-						type="button"
-						data-toggle="collapse"
-						data-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
+					</Navbar.Brand>
+					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+					<Navbar.Collapse
+						id="responsive-navbar-nav"
+						style={{ justifyContent: "space-between" }}
 					>
-						<span className="navbar-toggler-icon" />
-					</button>
-					<div className="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul className="navbar-nav mr-auto">
-							<li className="nav-item">
-								<a className="nav-link" href="#aboutMe">
-									About
-								</a>
-							</li>
-							<li className="nav-item">
-								<a className="nav-link" href="#skillsSection">
-									Skills
-								</a>
-							</li>
-							<li className="nav-item">
-								<a className="nav-link" href="#projectsSection">
-									Projects
-								</a>
-							</li>
-							<li className="nav-item">
-								<a className="nav-link" href="#contactSection">
-									Contact
-								</a>
-							</li>
-							<li className="nav-item dropdown">
-								<div
-									className="dropdown-menu"
-									aria-labelledby="navbarDropdown"
-								></div>
-							</li>
-						</ul>
-						<div className="iconsContainer">
-							<a
-								href="https://github.com/diaz4674"
+						<Nav className="mr-auto" style={{ alignItems: "center" }}>
+							<Nav.Link href="#aboutMe" style={noUnderline}>
+								About Me
+							</Nav.Link>
+
+							<Nav.Link href="#Projects" style={noUnderline}>
+								Projects
+							</Nav.Link>
+
+							<Nav.Link href="#contactSection" style={noUnderline}>
+								Contact
+							</Nav.Link>
+						</Nav>
+						<EndIcons>
+							<Icons
 								target="_blank"
-								style={{ textDecoration: "none" }}
+								href="https://github.com/diaz4674"
+							>
+								<img
+									src={Git}
+									alt="Github"
+									className="navIcons"
+								/>
+							</Icons>
+							<Icons
+								target="_blank"
+								href="https://www.linkedin.com/in/diaz4674/"
+							>
+								<img
+									src={Linkedin}
+									alt="Linkedin"
+									className="navIcons"
+								/>
+							</Icons>
+							<label
+								id="switch"
+								class="switch"
+								style={{ margin: "0", marginLeft: "15px" }}
 							>
 								{" "}
-								<img src={Git} alt="Github Icon" className="navIcons" />{" "}
-							</a>
-							<a href="https://www.linkedin.com/in/diaz4674/" target="_blank">
-								<img src={Linkedin} alt="LinkedIn Icon" className="navIcons" />{" "}
-							</a>
-							<label id="switch" class="switch">
 								<input
 									type="checkbox"
 									onClick={this.toggleTheme.bind(this)}
@@ -129,9 +129,10 @@ class Professional extends React.Component {
 								/>
 								<span class="slider round"></span>
 							</label>
-						</div>
-					</div>
-				</nav>
+						</EndIcons>
+					</Navbar.Collapse>
+				</Navbar>
+				
 				<div className="bodyContainer">
 					<div className="shadedColor">
 						<div className="img-top">
@@ -144,7 +145,8 @@ class Professional extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="aboutContainer" id="aboutMe">
+                <ScrollableAnchor id={"aboutMe"}> 
+				<div className="aboutContainer">
 					<h2> About Me</h2>
 					<p>
 						I am a Software Engineer that loves to focus on creating
@@ -163,6 +165,7 @@ class Professional extends React.Component {
 					to create some custom icons.
 					<p />
 				</div>
+                </ScrollableAnchor>
 				<div className="skillsContainer" id="skillsSection">
 					<h1>Skills</h1>
 					<button className="skillsButton"> Show Skills </button>
@@ -202,12 +205,15 @@ class Professional extends React.Component {
 						</div>
 					</div>
 				</div>
+                <ScrollableAnchor id={"Projects"}> 
 				<div className="projectsContainer" id="projectsSection">
 					<ProjectCarousel mode="proMode" />
 				</div>
+                </ScrollableAnchor>
 				<footer>
 					<div className="card-body">
-						<div className="footerContainer" id="contactSection">
+                        <ScrollableAnchor id={"contactSection"}> 
+						<div className="footerContainer">
 							<div className="phoneEmailSection">
 								<h4>Contact Information</h4>
 								<div className="footerIconContainer">
@@ -261,6 +267,7 @@ class Professional extends React.Component {
 								</div>
 							</div>
 						</div>
+                        </ScrollableAnchor>
 					</div>
 				</footer>
 			</div>
@@ -268,4 +275,15 @@ class Professional extends React.Component {
 	}
 }
 
+
+const EndIcons = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+`;
+
+const Icons = styled.a`
+	margin: 0 12px;
+`;
 export default withRouter(Professional);
