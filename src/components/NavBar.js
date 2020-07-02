@@ -14,9 +14,6 @@ const noUnderline = {
 };
 
 class Topbar extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 	state = {
 		linkedIn: false,
 		Github: false,
@@ -37,7 +34,6 @@ class Topbar extends React.Component {
 	}
 	toggleTheme(e) {
 		e.preventDefault();
-		console.log("hi");
 		if (localStorage.getItem("theme") === "bat-theme") {
 			this.setTheme("theme-professional");
 			this.props.history.push("/creativeMode");
@@ -45,7 +41,6 @@ class Topbar extends React.Component {
 			this.setTheme("bat-theme");
 			this.props.history.push("/");
 		}
-		console.log(localStorage.getItem("theme"));
 	}
 
 	toggleGit = () => {
@@ -116,7 +111,7 @@ class Topbar extends React.Component {
 							</Icons>
 							<label
 								id="switch"
-								class="switch"
+								className="switch"
 								style={{ margin: "0", marginLeft: "15px" }}
 							>
 								{" "}
@@ -125,7 +120,7 @@ class Topbar extends React.Component {
 									onClick={this.toggleTheme.bind(this)}
 									id="slider"
 								/>
-								<span class="slider round"></span>
+								<span className="slider round"></span>
 							</label>
 						</EndIcons>
 					</Navbar.Collapse>

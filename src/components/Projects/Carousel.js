@@ -10,23 +10,32 @@ import { Title } from "./_Style.js";
 
 // Projects Card Container that is a react-bootstrap Carousel
 class Projects extends React.Component {
-	state = { proMode: true };
-	componentDidMount = () => {
-		this.props.mode === true
-			? this.setState({
+	state = { font: "" };
+	async componentDidMount() {}
+
+	UNSAFE_componentWillReceiveProps(nextProps) {
+		if (nextProps.mode === undefined) {
+			return null;
+		} else {
+			if (nextProps.mode === true) {
+				this.setState({
 					proMode: false,
 					font: "raleway-bold",
-			  })
-			: this.setState({
+					background: "#ffb6af",
+					stroke: "",
+					hoverColor: "#f77063",
+				});
+			} else {
+				this.setState({
 					proMode: false,
 					font: "Bangers",
-					background: "#ff5296",
-			  });
-	};
-
-	// componentWillUnmount = () => {
-	// 	this.pauseVideo();
-	// };
+					background: "#fffb9b",
+					stroke: "1px black",
+					hoverColor: "#f5bd07",
+				});
+			}
+		}
+	}
 
 	playVideo = (e) => {
 		// plays video when component mounts
@@ -40,7 +49,7 @@ class Projects extends React.Component {
 	// };
 
 	render() {
-		let { font, proMode } = this.state;
+		let { font } = this.state;
 		return (
 			<Container>
 				<Carousel
@@ -64,7 +73,7 @@ class Projects extends React.Component {
 								muted
 							/>
 							<Description
-								mode={proMode}
+								mode={this.state}
 								description="A workout tracker app that provides suggested workouts for users, and helps them track their progress."
 								tech=" React | Redux | Auth0  | PostgreSQL | Styled Components | Git | Notion | Trello | Figma | PWA "
 								link="https://liftquestapp.com/"
@@ -87,7 +96,7 @@ class Projects extends React.Component {
 								muted
 							/>
 							<Description
-								mode={proMode}
+								mode={this.state}
 								description="A site where users may store their favorite sites all
               in one place, and browse by sections to view their saved sites."
 								tech=" React | React Hooks | Redux | CSS3 | Material-UI Framework
@@ -112,7 +121,7 @@ class Projects extends React.Component {
 								muted
 							/>
 							<Description
-								mode={proMode}
+								mode={this.state}
 								description="A pirate adventure game where the user competes with other players to be the most feared pirate"
 								tech=" Python | Django | PostgreSQL | Pusher | React "
 								link="https://hungry-spence-d1d30a.netlify.com/"
@@ -135,7 +144,7 @@ class Projects extends React.Component {
 								muted
 							/>
 							<Description
-								mode={proMode}
+								mode={this.state}
 								description="A meet up app for stay at home moms to create/attend events with other stay at home moms to create a supportive and communal community."
 								tech="React | Redux | React Bootstrap | CSS3 | Axios | Git"
 								link="https://ecstatic-boyd-937833.netlify.com/"

@@ -10,6 +10,8 @@ import Topbar from "./NavBar";
 import BottomNav from "./BottomNav";
 import ScrollAnimation from "react-animate-on-scroll";
 import Loading from "./Loading";
+import { connect } from "react-redux";
+import { toggleModes } from "./actions";
 // Header Video Style
 const Vid1 = {
 	width: "100%",
@@ -37,9 +39,7 @@ class Landing extends Component {
 			<div style={Container}>
 				<Loading loading={this.state.loading} />
 				<Head>
-					<ScrollableAnchor id={"Top"}>
-						<Topbar />
-					</ScrollableAnchor>
+					<Topbar />
 				</Head>
 				<Body>
 					{/* ScrollableAnchor is used to navigate/auto scroll to the section once its selected
@@ -67,7 +67,7 @@ class Landing extends Component {
 						style={{ width: "100%" }}
 					>
 						<ProjectsDiv>
-							<Projects />
+							<Projects mode="creative" />
 						</ProjectsDiv>
 					</ScrollAnimation>
 					<ScrollableAnchor id={"Contact"}>
@@ -138,4 +138,6 @@ const ProjectsDiv = styled.div`
 	background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%);
 `;
 
-export default Landing;
+const mapStateToProps = (state) => ({ state });
+
+export default connect(mapStateToProps, { toggleModes })(Landing);

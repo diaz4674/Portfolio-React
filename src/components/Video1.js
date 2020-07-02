@@ -31,9 +31,7 @@ class Video1 extends React.Component {
 	switchVideo = async () => {
 		//When First video ends, switches to second video which is capable
 		//of renerding a seamless continuous loop of the waves and flowing cape
-		console.log(this.state);
 		await this.setState({ video1Finished: true });
-		console.log(this.state);
 	};
 
 	render = () => {

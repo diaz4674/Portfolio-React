@@ -1,42 +1,52 @@
 import React from "react";
 import styled from "styled-components";
 import { Title, Live, Text } from "./_Style.js";
+import { connect } from "react-redux";
 
 // Technology description Component
 class Desciption extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			proMode: true,
+			font: "",
+			background: "",
+			stroke: "",
+			hoverColor: "",
 		};
 	}
-	componentDidMount() {
-		this.props.mode === true
-			? this.setState({
-					proMode: false,
-					font: "raleway-bold",
-					background: "#ffb6af",
-					stroke: "",
-					hoverColor: "#f77063",
-			  })
-			: this.setState({
-					proMode: false,
-					font: "Bangers",
-					background: "#fffb9b",
-					stroke: "1px black",
-					hoverColor: "#f5bd07",
-			  });
+	UNSAFE_componentWillReceiveProps(nextProps) {
+		if (nextProps.mode === undefined) {
+			return null;
+		} else {
+			let { font, background, stroke, hoverColor } = nextProps.mode;
+			this.setState({
+				font,
+				background,
+				stroke,
+				hoverColor,
+			});
+		}
 	}
 	render() {
-		let { description, tech, link, gitrepo } = this.props;
 		let { font, background, stroke, hoverColor } = this.state;
-		console.log(this.state);
+		let { description, tech, link, gitrepo } = this.props;
 		return (
 			<Container>
-				<Title fontSize="37px"> Summary </Title>
-				<Text fontSize="20px">{description}</Text>
-				<Title fontSize="37px"> Tech Stack </Title>
-				<Text fontSize="20px"> {tech}</Text>
+				<Title mode={font} fontSize="37px">
+					{" "}
+					Summary{" "}
+				</Title>
+				<Text mode={font} fontSize="20px">
+					{description}
+				</Text>
+				<Title mode={font} fontSize="37px">
+					{" "}
+					Tech Stack{" "}
+				</Title>
+				<Text mode={font} fontSize="20px">
+					{" "}
+					{tech}
+				</Text>
 				<ButtonContainer>
 					<Live
 						href={link}
@@ -102,4 +112,6 @@ const ButtonContainer = styled.div`
 	}
 `;
 
-export default Desciption;
+const mapStateToProps = (state) => ({ state });
+
+export default connect(mapStateToProps)(Desciption);

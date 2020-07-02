@@ -14,17 +14,14 @@ import {
 class Projects extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			proMode: true,
-		};
+		this.state = {};
 	}
-	componentDidMount() {
-		this.props.mode === "proMode"
-			? this.setState({
-					proMode: false,
-					font: "raleway-bold",
-			  })
-			: this.setState({ proMode: false, font: "Bangers" });
+	async componentDidMount() {
+		if (this.props.mode === "proMode") {
+			this.setState({ proMode: true });
+		} else {
+			this.setState({ proMode: false });
+		}
 	}
 
 	render() {

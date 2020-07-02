@@ -1,11 +1,11 @@
 import React from "react";
-// import Description from "./Description";
 import Git from "../../icons/Git.png";
 import Linkedin from "../../icons/linkedin.png";
 import BatmanLego from "../../images/BatmanLego.jpg";
 import Profile from "../../images/profile.jpg";
 import { withRouter } from "react-router-dom";
-// import Alabastra from "../DemoVideos/Alabastra.mp4";
+import { toggleModes } from "../actions";
+import { connect } from "react-redux";
 import ProjectCarousel from "../Projects/Projects";
 import "./professionalStyles.css";
 import ScrollableAnchor from "react-scrollable-anchor";
@@ -18,11 +18,9 @@ const noUnderline = {
 };
 
 class Professional extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	componentDidMount() {
+	async componentDidMount() {
 		if (localStorage.getItem("theme") === "bat-theme") {
+			await this.props.toggleModes(true);
 			this.setTheme("bat-theme");
 			document.getElementById("slider").checked = false;
 		} else {
@@ -36,7 +34,7 @@ class Professional extends React.Component {
 	}
 	toggleTheme(e) {
 		e.preventDefault();
-		console.log("hi");
+
 		if (localStorage.getItem("theme") === "bat-theme") {
 			this.setTheme("theme-professional");
 			this.props.history.push("/creativeMode");
@@ -44,7 +42,6 @@ class Professional extends React.Component {
 			this.setTheme("bat-theme");
 			this.props.history.push("/");
 		}
-		console.log(localStorage.getItem("theme"));
 	}
 	render() {
 		return (
@@ -73,7 +70,7 @@ class Professional extends React.Component {
 					crossOrigin="anonymous"
 				/>
 				{/* NavBar */}
-                				<Navbar collapseOnSelect expand="lg" style={{ color: "white" }}>
+				<Navbar collapseOnSelect expand="lg" style={{ color: "white" }}>
 					<Navbar.Brand to="/" style={noUnderline}>
 						Miguel Diaz
 					</Navbar.Brand>
@@ -99,26 +96,20 @@ class Professional extends React.Component {
 							<Icons
 								target="_blank"
 								href="https://github.com/diaz4674"
+								rel="noopener noreferrer"
 							>
-								<img
-									src={Git}
-									alt="Github"
-									className="navIcons"
-								/>
+								<img src={Git} alt="Github" className="navIcons" />
 							</Icons>
 							<Icons
 								target="_blank"
 								href="https://www.linkedin.com/in/diaz4674/"
+								rel="noopener noreferrer"
 							>
-								<img
-									src={Linkedin}
-									alt="Linkedin"
-									className="navIcons"
-								/>
+								<img src={Linkedin} alt="Linkedin" className="navIcons" />
 							</Icons>
 							<label
 								id="switch"
-								class="switch"
+								className="switch"
 								style={{ margin: "0", marginLeft: "15px" }}
 							>
 								{" "}
@@ -127,12 +118,12 @@ class Professional extends React.Component {
 									onClick={this.toggleTheme.bind(this)}
 									id="slider"
 								/>
-								<span class="slider round"></span>
+								<span className="slider round"></span>
 							</label>
 						</EndIcons>
 					</Navbar.Collapse>
 				</Navbar>
-				
+
 				<div className="bodyContainer">
 					<div className="shadedColor">
 						<div className="img-top">
@@ -145,27 +136,28 @@ class Professional extends React.Component {
 						</div>
 					</div>
 				</div>
-                <ScrollableAnchor id={"aboutMe"}> 
-				<div className="aboutContainer">
-					<h2> About Me</h2>
-					<p>
-						I am a Software Engineer that loves to focus on creating
-						aesthetically pleasing colors, themes, and animations to generate a
-						strong user interface. I also enjoy working with the backend to help
-						make a smooth transition and seeing the Restful API’s successfully
-						displayed for users. In the next five years, I am hoping to gain
-						enough experience to be considered a Senior Software Engineer.
-					</p>
-					<p />
-					Hobbies include 3D modeling designs and printing them out with my 3D
-					printer, as well as spending time with my wife &amp; two cats. I have
-					a passion for learning, and spend time in Udemy to learn other skills,
-					such as Adobe products that helped build this site. The demo videos
-					below were made with Adobe Premier, while Adobe Illustrator was used
-					to create some custom icons.
-					<p />
-				</div>
-                </ScrollableAnchor>
+				<ScrollableAnchor id={"aboutMe"}>
+					<div className="aboutContainer">
+						<h2> About Me</h2>
+						<p>
+							I am a Software Engineer that loves to focus on creating
+							aesthetically pleasing colors, themes, and animations to generate
+							a strong user interface. I also enjoy working with the backend to
+							help make a smooth transition and seeing the Restful API’s
+							successfully displayed for users. In the next five years, I am
+							hoping to gain enough experience to be considered a Senior
+							Software Engineer.
+						</p>
+						<p />
+						Hobbies include 3D modeling designs and printing them out with my 3D
+						printer, as well as spending time with my wife &amp; two cats. I
+						have a passion for learning, and spend time in Udemy to learn other
+						skills, such as Adobe products that helped build this site. The demo
+						videos below were made with Adobe Premier, while Adobe Illustrator
+						was used to create some custom icons.
+						<p />
+					</div>
+				</ScrollableAnchor>
 				<div className="skillsContainer" id="skillsSection">
 					<h1>Skills</h1>
 					<button className="skillsButton"> Show Skills </button>
@@ -205,76 +197,77 @@ class Professional extends React.Component {
 						</div>
 					</div>
 				</div>
-                <ScrollableAnchor id={"Projects"}> 
-				<div className="projectsContainer" id="projectsSection">
-					<ProjectCarousel mode="proMode" />
-				</div>
-                </ScrollableAnchor>
+				<ScrollableAnchor id={"Projects"}>
+					<div className="projectsContainer" id="projectsSection">
+						<ProjectCarousel mode="proMode" />
+					</div>
+				</ScrollableAnchor>
 				<footer>
 					<div className="card-body">
-                        <ScrollableAnchor id={"contactSection"}> 
-						<div className="footerContainer">
-							<div className="phoneEmailSection">
-								<h4>Contact Information</h4>
-								<div className="footerIconContainer">
-									<div className="phoneContainer">
-										<i className="fas fa-phone" />
-										<p className="card-text phone"> Phone: (415) 858-5179 </p>
+						<ScrollableAnchor id={"contactSection"}>
+							<div className="footerContainer">
+								<div className="phoneEmailSection">
+									<h4>Contact Information</h4>
+									<div className="footerIconContainer">
+										<div className="phoneContainer">
+											<i className="fas fa-phone" />
+											<p className="card-text phone"> Phone: (415) 858-5179 </p>
+										</div>
+										<div className="emailContainer">
+											<i className="far fa-envelope" />
+											<a href="mailto:diaz4674@gmail.com">
+												<p className="card-text email">
+													{" "}
+													Email: diaz4674@gmail.com{" "}
+												</p>
+											</a>
+										</div>
 									</div>
-									<div className="emailContainer">
-										<i className="far fa-envelope" />
-										<a href="mailto:diaz4674@gmail.com">
-											<p className="card-text email">
-												{" "}
-												Email: diaz4674@gmail.com{" "}
-											</p>
-										</a>
+								</div>
+								<div className="socialMediaLinks">
+									<div className="socialSection">
+										<div>
+											<h4>Social</h4>
+										</div>
+										<div className="socialIconFooter">
+											<a
+												href="https://github.com/diaz4674"
+												target="_blank"
+												style={{ textDecoration: "none" }}
+												rel="noopener noreferrer"
+											>
+												<img
+													src="https://camo.githubusercontent.com/7710b43d0476b6f6d4b4b2865e35c108f69991f3/68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67"
+													alt="Github Icon"
+													className="navIcons"
+												/>
+												<p className="githubText"> Github </p>
+											</a>
+											<a
+												href="https://www.linkedin.com/in/miguel-diaz-a2114512a"
+												target="_blank"
+												className="navIcons"
+												rel="noopener noreferrer"
+												style={{ textDecoration: "none" }}
+											>
+												<img
+													src={Linkedin}
+													alt="LinkedIn Icon"
+													className="navIcons"
+												/>
+												<p className="githubText"> Linkedin </p>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div className="socialMediaLinks">
-								<div className="socialSection">
-									<div>
-										<h4>Social</h4>
-									</div>
-									<div className="socialIconFooter">
-										<a
-											href="https://github.com/diaz4674"
-											target="_blank"
-											style={{ textDecoration: "none" }}
-										>
-											<img
-												src="https://camo.githubusercontent.com/7710b43d0476b6f6d4b4b2865e35c108f69991f3/68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67"
-												alt="Github Icon"
-												className="navIcons"
-											/>
-											<p className="githubText"> Github </p>
-										</a>
-										<a
-											href="https://www.linkedin.com/in/miguel-diaz-a2114512a"
-											target="_blank"
-											className="navIcons"
-											style={{ textDecoration: "none" }}
-										>
-											<img
-												src={Linkedin}
-												alt="LinkedIn Icon"
-												className="navIcons"
-											/>
-											<p className="githubText"> Linkedin </p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-                        </ScrollableAnchor>
+						</ScrollableAnchor>
 					</div>
 				</footer>
 			</div>
 		);
 	}
 }
-
 
 const EndIcons = styled.div`
 	display: flex;
@@ -286,4 +279,9 @@ const EndIcons = styled.div`
 const Icons = styled.a`
 	margin: 0 12px;
 `;
-export default withRouter(Professional);
+
+const mapStateToProps = (state) => ({ state });
+
+export default withRouter(
+	connect(mapStateToProps, { toggleModes })(Professional)
+);
