@@ -248,11 +248,11 @@ div.headerText {
 .aboutContainer {
 	margin-top: 15px;
 	padding: 15px;
-    position: absolute;
+	position: absolute;
 
-    background: #FFFFFF;
-    box-shadow: 0px 3px 15px #E1E9F1;
-    border-radius: 10px;
+	background: #ffffff;
+	box-shadow: 0px 3px 15px #e1e9f1;
+	border-radius: 10px;
 }
 
 .skills {
@@ -689,7 +689,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #ccc;
+	background-color: white;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
