@@ -248,11 +248,17 @@ div.headerText {
 .aboutContainer {
 	margin-top: 15px;
 	padding: 15px;
-	position: absolute;
-
+	width: 57%;
 	background: #ffffff;
 	box-shadow: 0px 3px 15px #e1e9f1;
 	border-radius: 10px;
+}
+
+.RowCenter {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .skills {
@@ -265,10 +271,11 @@ div.headerText {
 }
 
 .skillsContainer {
-	padding: 100px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 35px 0 45px;
+	position: relative;
 }
 
 .htmlLogo {
@@ -382,14 +389,39 @@ img.card-img-top * {
 	display: flex;
 	justify-content: center;
 }
+
+.SkillsHeader {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
 .hiddenSkills {
-	display: none;
+	position: absolute;
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+.transitionHeaderSkill {
+	position: absolute;
+	opacity: 0;
+	transition: all 1s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.showSkills {
+	transition: 1s ease;
+	opacity: 1;
+	position: relative;
 }
 
 .skillsButton {
 	display: block;
 	background: #f77063;
-	margin: 25px;
 	color: white;
 	border: none;
 	position: relative;
@@ -403,6 +435,11 @@ img.card-img-top * {
 .skillsButton:hover {
 	background: #fff;
 	color: #f77063;
+}
+.skillsButton:focus {
+	outline: none;
+	background: #ffb4ad;
+	color: white;
 }
 .skillsButton:before,
 .skillsButton:after {
@@ -500,9 +537,6 @@ div.socialSection {
 	color: black;
 }
 
-.lastFooterContainer {
-}
-
 @media only screen and (max-width: 1390px) {
 	.img-top {
 		height: 100%;
@@ -560,6 +594,10 @@ div.socialSection {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	.RowCenter {
+		flex-direction: column-reverse;
 	}
 }
 
@@ -689,7 +727,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: white;
+	background-color: #f77063;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }

@@ -11,6 +11,8 @@ import "./professionalStyles.css";
 import ScrollableAnchor from "react-scrollable-anchor";
 import { Navbar, Nav } from "react-bootstrap";
 import styled from "styled-components";
+import Lottie from "react-lottie";
+import Developer from "../assets/developer.json";
 
 const noUnderline = {
 	textDecoration: "none",
@@ -18,7 +20,13 @@ const noUnderline = {
 };
 
 class Professional extends React.Component {
+	state = {
+		skills: false,
+		showSkills: "",
+		SkillsHeader: "SkillsHeader",
+	};
 	async componentDidMount() {
+		console.log(this.state);
 		if (localStorage.getItem("theme") === "bat-theme") {
 			await this.props.toggleModes(true);
 			this.setTheme("bat-theme");
@@ -43,7 +51,23 @@ class Professional extends React.Component {
 			this.props.history.push("/");
 		}
 	}
+	toggleSkill() {
+		this.setState({
+			showSkills: "showSkills",
+			SkillsHeader: "transitionHeaderSkill",
+		});
+	}
+
 	render() {
+		// Lottie animation settings
+		const defaultOptions = {
+			loop: true,
+			autoplay: true,
+			animationData: Developer,
+		};
+
+		let { showSkills, SkillsHeader } = this.state;
+
 		return (
 			<div>
 				<title>Miguel Diaz</title>
@@ -70,10 +94,14 @@ class Professional extends React.Component {
 					crossOrigin="anonymous"
 				/>
 				{/* NavBar */}
-				<Navbar collapseOnSelect expand="lg" style={{ color: "white" }}>
-					<Navbar.Brand to="/" style={noUnderline}>
-						Miguel Diaz
-					</Navbar.Brand>
+				<Navbar
+					collapseOnSelect
+					expand="lg"
+					style={{
+						background: "white",
+						boxShadow: "0px 3px 15px gray",
+					}}
+				>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse
 						id="responsive-navbar-nav"
@@ -83,7 +111,9 @@ class Professional extends React.Component {
 							<Nav.Link href="#aboutMe" style={noUnderline}>
 								About Me
 							</Nav.Link>
-
+							<Nav.Link href="#skillsSection" style={noUnderline}>
+								Skills
+							</Nav.Link>
 							<Nav.Link href="#Projects" style={noUnderline}>
 								Projects
 							</Nav.Link>
@@ -136,66 +166,87 @@ class Professional extends React.Component {
 						</div>
 					</div>
 				</div>
-				<ScrollableAnchor id={"aboutMe"}>
-					<div className="aboutContainer">
-						<h2> About Me</h2>
-						<p>
-							I am a Software Engineer that loves to focus on creating
-							aesthetically pleasing colors, themes, and animations to generate
-							a strong user interface. I also enjoy working with the backend to
-							help make a smooth transition and seeing the Restful API’s
-							successfully displayed for users. In the next five years, I am
-							hoping to gain enough experience to be considered a Senior
-							Software Engineer.
-						</p>
-						<p />
-						Hobbies include 3D modeling designs and printing them out with my 3D
-						printer, as well as spending time with my wife &amp; two cats. I
-						have a passion for learning, and spend time in Udemy to learn other
-						skills, such as Adobe products that helped build this site. The demo
-						videos below were made with Adobe Premier, while Adobe Illustrator
-						was used to create some custom icons.
-						<p />
-					</div>
-				</ScrollableAnchor>
-				<div className="skillsContainer" id="skillsSection">
-					<h1>Skills</h1>
-					<button className="skillsButton"> Show Skills </button>
-					<div className="hiddenSkills">
-						<div className="skills">
-							<img src="images/HTMLLogo.png" alt="HTML" className="htmlLogo" />
-							<img src="images/CSS3Logo.png" alt="CSS" className="htmlLogo" />
-							<img src="images/React.png" alt="React" className="logos" />
-							<img src="images/Redux.png" alt="Redux" className="logos" />
-							<img
-								src="images/Javascript.png"
-								alt="Javascript"
-								className="logos"
-							/>
-							<img src="images/jQuery.png" alt="jQuery" className="logos" />
-							<img src="images/githubIcon.png" alt="Github" className="logos" />
-							<img src="images/SQL.png" alt="SQL" className="logos" />
-						</div>
-						<div className="card">
-							<div className="card-header AdditionalSkillsHeader">
-								<h4> Additional Skills </h4>
+				<div className="RowCenter">
+					<ScrollableAnchor id={"skillsSection"}>
+						<div className="skillsContainer">
+							<h1>Skills</h1>
+							<div className={`${SkillsHeader}`}>
+								<Lottie options={defaultOptions} height={450} width={450} />
+								<button
+									className="skillsButton"
+									onClick={this.toggleSkill.bind(this)}
+								>
+									{" "}
+									Show Skills{" "}
+								</button>
 							</div>
-							<div className="card-body ">
-								<blockquote className="blockquote mb-0 additionalSkillsContainer">
-									<ul className="skillsList">
-										<li>Express</li>
-										<li>Restful API's</li>
-										<li>UI Frameworks </li>
-									</ul>
-									<ul className="skillsList">
-										<li>CRUD Operations</li>
-										<li>Adobe Products</li>
-										<li>Agile/Scrum Environments</li>
-									</ul>
-								</blockquote>
+							<div className={`hiddenSkills ${showSkills}`}>
+								<div className="skills">
+									<img
+										src="images/HTMLLogo.png"
+										alt="HTML"
+										className="htmlLogo"
+									/>
+									<img src="../icons/CSS3.png" alt="CSS" className="CSS" />
+									<img src="images/React.png" alt="React" className="logos" />
+									<img src="images/Redux.png" alt="Redux" className="logos" />
+									<img
+										src="images/Javascript.png"
+										alt="Javascript"
+										className="logos"
+									/>
+									<img src="images/jQuery.png" alt="jQuery" className="logos" />
+									<img
+										src="images/githubIcon.png"
+										alt="Github"
+										className="logos"
+									/>
+									<img src="images/SQL.png" alt="SQL" className="logos" />
+								</div>
+								<div className="card">
+									<div className="card-header AdditionalSkillsHeader">
+										<h4> Additional Skills </h4>
+									</div>
+									<div className="card-body ">
+										<blockquote className="blockquote mb-0 additionalSkillsContainer">
+											<ul className="skillsList">
+												<li>Express</li>
+												<li>Restful API's</li>
+												<li>UI Frameworks </li>
+											</ul>
+											<ul className="skillsList">
+												<li>CRUD Operations</li>
+												<li>Adobe Products</li>
+												<li>Agile/Scrum Environments</li>
+											</ul>
+										</blockquote>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
+					</ScrollableAnchor>
+					<ScrollableAnchor id={"aboutMe"}>
+						<div className="aboutContainer">
+							<h2> About Me</h2>
+							<p>
+								I am a Software Engineer that loves to focus on creating
+								aesthetically pleasing colors, themes, and animations to
+								generate a strong user interface. I also enjoy working with the
+								backend to help make a smooth transition and seeing the Restful
+								API’s successfully displayed for users. In the next five years,
+								I am hoping to gain enough experience to be considered a Senior
+								Software Engineer.
+							</p>
+							<p />
+							Hobbies include 3D modeling designs and printing them out with my
+							3D printer, as well as spending time with my wife &amp; two cats.
+							I have a passion for learning, and spend time in Udemy to learn
+							other skills, such as Adobe products that helped build this site.
+							The demo videos below were made with Adobe Premier, while Adobe
+							Illustrator was used to create some custom icons.
+							<p />
+						</div>
+					</ScrollableAnchor>
 				</div>
 				<ScrollableAnchor id={"Projects"}>
 					<div className="projectsContainer" id="projectsSection">
