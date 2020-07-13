@@ -18,9 +18,9 @@ class Projects extends React.Component {
 	}
 	async componentDidMount() {
 		if (this.props.mode === "proMode") {
-			this.setState({ proMode: true });
+			this.setState({ proMode: true, font: "raleway-bold" });
 		} else {
-			this.setState({ proMode: false });
+			this.setState({ proMode: false, font: "Bangers" });
 		}
 	}
 

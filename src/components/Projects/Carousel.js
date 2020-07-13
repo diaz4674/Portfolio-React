@@ -7,6 +7,7 @@ import SAM from "../DemoVideos/SAM.mp4";
 import Alabastra from "../DemoVideos/Alabastra.mp4";
 import Lyftquest from "../DemoVideos/Liftquest.mp4";
 import { Title } from "./_Style.js";
+import Ledgerfire from "../DemoVideos/Ledgerfire.mp4";
 
 // Projects Card Container that is a react-bootstrap Carousel
 class Projects extends React.Component {
@@ -64,7 +65,7 @@ class Projects extends React.Component {
 							<Video
 								ref="vidRef"
 								onEnded={this.switchVideo}
-								src={Lyftquest}
+								src={Ledgerfire}
 								type="video/mp4"
 								loop
 								onMouseOver={this.playVideo}

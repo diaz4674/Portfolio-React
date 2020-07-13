@@ -118,7 +118,12 @@ class Professional extends React.Component {
 					}}
 				>
 					<Navbar.Brand
-						style={{ noUnderline, fontWeight: "500", fontSize: "19px" }}
+						style={{
+							noUnderline,
+							fontWeight: "500",
+							fontSize: "20px",
+							fontStyle: "oblique",
+						}}
 					>
 						MIGUEL DIAZ
 					</Navbar.Brand>
@@ -267,21 +272,21 @@ class Professional extends React.Component {
 						<div className="aboutContainer">
 							<h2> About Me</h2>
 							<p>
-								I am a Software Engineer that loves to focus on creating
-								aesthetically pleasing colors, themes, and animations to
-								generate a strong user interface. I also enjoy working with the
-								backend to help make a smooth transition and seeing the Restful
-								API’s successfully displayed for users. In the next five years,
-								I am hoping to gain enough experience to be considered a Senior
-								Software Engineer.
+								Software Engineer that goes the extra mile to develop elegant,
+								reusable, user-friendly solutions and experiences. Enjoys
+								encountering complex problems to hone skills to solve bigger and
+								better challenges. I enjoy building a healthy working
+								relationship with people by communicating, building rapport, and
+								organizing to build an effective work flow. In the next five
+								years, I am hoping to gain enough experience to be considered a
+								Senior Software Engineer.
 							</p>
 							<p />
 							Hobbies include 3D modeling designs and printing them out with my
 							3D printer, as well as spending time with my wife &amp; two cats.
-							I have a passion for learning, and spend time in Udemy to learn
-							other skills, such as Adobe products that helped build this site.
-							The demo videos below were made with Adobe Premier, while Adobe
-							Illustrator was used to create some custom icons.
+							I have a passion for learning, and spend time in Pluralsight to
+							learn additional skills, such as Adobe the products that helped
+							build this site.
 							<p />
 							<FamilyImg src={Us} alt="Miguel, Pregnant wife, and pets" />
 						</div>
