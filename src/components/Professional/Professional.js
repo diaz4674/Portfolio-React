@@ -22,11 +22,7 @@ import dj from "../../icons/dj.png";
 import NodeIcon from "../../icons/node.png";
 import Python from "../../icons/python.png";
 import adobeCreative from "../../icons/adobeCreative.png";
-
-const noUnderline = {
-	textDecoration: "none",
-	fontSize: "20px",
-};
+import Us from "../../images/us4.0.png";
 
 class Professional extends React.Component {
 	state = {
@@ -179,7 +175,7 @@ class Professional extends React.Component {
 				</div>
 
 				<ScrollableAnchor id={"aboutMe"}>
-					<div className="RowCenter">
+					<div className="RowCenterSection">
 						<ScrollableAnchor id={"skillsSection"}>
 							<div className="skillsContainer">
 								<h1>Skills</h1>
@@ -277,6 +273,7 @@ class Professional extends React.Component {
 							The demo videos below were made with Adobe Premier, while Adobe
 							Illustrator was used to create some custom icons.
 							<p />
+							<FamilyImg src={Us} alt="Miguel, Pregnant wife, and pets" />
 						</div>
 					</div>
 				</ScrollableAnchor>
@@ -354,6 +351,17 @@ class Professional extends React.Component {
 	}
 }
 
+const FamilyImg = styled.img`
+	width: 35em;
+	display: flex;
+	margin: auto;
+	padding: 15px;
+	background: #ffffff;
+
+	@media (max-width: 650px) {
+		width: 100%;
+	}
+`;
 const EndIcons = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -371,6 +379,12 @@ const ColumnCenter = styled.div`
 	justify-content: center;
 	align-items: center;
 `;
+
+const noUnderline = {
+	textDecoration: "none",
+	fontSize: "20px",
+};
+
 const mapStateToProps = (state) => ({ state });
 
 export default withRouter(

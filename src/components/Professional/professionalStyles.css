@@ -262,11 +262,12 @@ div.headerText {
 	border-radius: 10px;
 }
 
-.RowCenter {
+.RowCenterSection {
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	margin: 25px 0;
 }
 
 .skills {
@@ -606,7 +607,7 @@ div.socialSection {
 		align-items: center;
 	}
 
-	.RowCenter {
+	.RowCenterSection {
 		flex-direction: column-reverse;
 		justify-content: space-around;
 	}
