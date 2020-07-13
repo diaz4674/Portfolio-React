@@ -21,8 +21,8 @@ class AboutMe extends Component {
 						Hobbies include 3D modeling designs and printing them out with my 3D
 						printer, as well as spending time with my wife &amp; two cats. I
 						have a passion for learning, and spend time in Pluralsight to learn
-						additional skills, such as Adobe the products that helped build this
-						site.
+						additional skills, such as Adobe the suite that helped create the
+						below image of my family.
 					</Text>
 				</AboutText>
 				<FamilyImg src={Us} alt="Miguel, Pregnant wife, and pets" />
