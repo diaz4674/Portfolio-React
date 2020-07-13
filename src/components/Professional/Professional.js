@@ -18,7 +18,6 @@ import CSS3 from "../../icons/CSS3.png";
 import HTMLLogo from "../../icons/HTMLLogo.png";
 import JavascriptLogo from "../../icons/JS.png";
 import ReactLogo from "../../icons/React.png";
-import BataRang from "../../icons/batarang.png";
 import dj from "../../icons/dj.png";
 import NodeIcon from "../../icons/node.png";
 import Python from "../../icons/python.png";
@@ -108,7 +107,7 @@ class Professional extends React.Component {
 					collapseOnSelect
 					expand="lg"
 					style={{
-						background: "white",
+						background: "#FFB6AF",
 						boxShadow: "0px 3px 15px gray",
 					}}
 				>
@@ -196,24 +195,48 @@ class Professional extends React.Component {
 								</div>
 								<div className={`hiddenSkills ${showSkills}`}>
 									<div className="skills">
-										<img src={HTMLLogo} alt="HTML" className="logos" />
-										<img src={CSS3} alt="CSS" className="logos" />
-										<img src={ReactLogo} alt="React" className="logos" />
-										<img
-											src={JavascriptLogo}
-											alt="Javascript"
-											className="logos"
-										/>
-										<img src={dj} alt="Django" className="logos" />
-										<img src={Python} alt="Python" className="logos" />
-										<img src={NodeIcon} alt="Node" className="logos" />
-										<img
-											src={adobeCreative}
-											alt="Adobe Creative Suite"
-											className="logos"
-										/>
+										<ColumnCenter>
+											<img src={HTMLLogo} alt="HTML" className="logos" />
+											<h4>HTML5</h4>
+										</ColumnCenter>
+										<ColumnCenter>
+											<img src={CSS3} alt="CSS" className="logos" />
+											<h4>CSS3</h4>
+										</ColumnCenter>
+										<ColumnCenter>
+											<img src={ReactLogo} alt="React" className="logos" />
+											<h4>React</h4>
+										</ColumnCenter>
+										<ColumnCenter>
+											<img
+												src={JavascriptLogo}
+												alt="Javascript"
+												className="logos"
+											/>
+											<h4>Javascript</h4>
+										</ColumnCenter>
+										<ColumnCenter>
+											<img src={dj} alt="Django" className="logos" />
+											<h4>Django</h4>
+										</ColumnCenter>
+										<ColumnCenter>
+											<img src={Python} alt="Python" className="logos" />
+											<h4>Python</h4>
+										</ColumnCenter>
+										<ColumnCenter>
+											<img src={NodeIcon} alt="Node" className="logos" />
+											<h4>Node</h4>
+										</ColumnCenter>
+										<ColumnCenter>
+											<img
+												src={adobeCreative}
+												alt="Adobe Creative Suite"
+												className="logos"
+											/>
+											<h4>Adobe Suite</h4>
+										</ColumnCenter>
 									</div>
-									<div className="card">
+									{/* <div className="card">
 										<div className="card-header AdditionalSkillsHeader">
 											<h4> Additional Skills </h4>
 										</div>
@@ -231,7 +254,7 @@ class Professional extends React.Component {
 												</ul>
 											</blockquote>
 										</div>
-									</div>
+									</div> */}
 								</div>
 							</div>
 						</ScrollableAnchor>
@@ -294,6 +317,7 @@ class Professional extends React.Component {
 											<a
 												href="https://github.com/diaz4674"
 												target="_blank"
+												className="navIcons"
 												style={{ textDecoration: "none" }}
 												rel="noopener noreferrer"
 											>
@@ -341,6 +365,12 @@ const Icons = styled.a`
 	margin: 0 12px;
 `;
 
+const ColumnCenter = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
 const mapStateToProps = (state) => ({ state });
 
 export default withRouter(

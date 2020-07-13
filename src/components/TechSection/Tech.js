@@ -65,7 +65,7 @@ class TechSection extends Component {
 						<LogoContainer>
 							{" "}
 							<Img src={adobeCreative} alt="" />
-							<Bar name="Adobe Creative" />
+							<Bar name="Adobe Suite" />
 						</LogoContainer>
 					</TechDiv>
 				</Container>
