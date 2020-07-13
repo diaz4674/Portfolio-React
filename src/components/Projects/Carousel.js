@@ -60,6 +60,29 @@ class Projects extends React.Component {
 				>
 					<Carousel.Item className="carousel">
 						<VideoContainer>
+							<Title mode={font}> LedgerFire </Title>
+							<Video
+								ref="vidRef"
+								onEnded={this.switchVideo}
+								src={Lyftquest}
+								type="video/mp4"
+								loop
+								onMouseOver={this.playVideo}
+								onMouseOut={this.pauseVideo}
+								playsInline
+								muted
+							/>
+							<Description
+								mode={this.state}
+								description="Financial cloud based managerial accounting system to assist small businesses with financial insight."
+								tech=" React | Redux | Node  | PostgreSQL | Git | Notion | Trello | Figma"
+								link="https://ledgerfiredevbuild.netlify.app/"
+								gitrepo="https://github.com/Ledgerfire"
+							/>
+						</VideoContainer>
+					</Carousel.Item>
+					<Carousel.Item className="carousel">
+						<VideoContainer>
 							<Title mode={font}> LyftQuest </Title>
 							<Video
 								ref="vidRef"

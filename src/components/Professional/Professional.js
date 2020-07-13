@@ -29,6 +29,8 @@ class Professional extends React.Component {
 		skills: false,
 		showSkills: "",
 		SkillsHeader: "SkillsHeader",
+		linkedIn: false,
+		Github: false,
 	};
 	async componentDidMount() {
 		console.log(this.state);
@@ -62,6 +64,14 @@ class Professional extends React.Component {
 			SkillsHeader: "transitionHeaderSkill",
 		});
 	}
+
+	toggleGit = () => {
+		this.setState({ Github: !this.state.Github });
+	};
+
+	toggleLinkedIn = () => {
+		this.setState({ linkedIn: !this.state.linkedIn });
+	};
 
 	render() {
 		// Lottie animation settings
@@ -315,29 +325,83 @@ class Professional extends React.Component {
 												href="https://github.com/diaz4674"
 												target="_blank"
 												className="navIcons"
-												style={{ textDecoration: "none" }}
+												style={{
+													textDecoration: "none",
+													margin: "5px 10px 0 0",
+												}}
 												rel="noopener noreferrer"
+												onMouseEnter={this.toggleGit}
+												onMouseLeave={this.toggleGit}
 											>
 												<img
 													src="https://camo.githubusercontent.com/7710b43d0476b6f6d4b4b2865e35c108f69991f3/68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67"
 													alt="Github Icon"
-													className="navIcons"
+													style={{
+														height: "2em",
+														transition: "ease 0.3s",
+														marginBottom: "10px",
+														transform: this.state.Github
+															? "scale(1.5, 1.5)"
+															: "",
+													}}
 												/>
-												<p className="githubText"> Github </p>
+												<p
+													style={{
+														fontSize: "20px",
+														display: "flex",
+														justifyContent: "center",
+														color: "black",
+														transition: "ease 0.3s",
+														transform: this.state.Github
+															? "scale(1.1, 1.1)"
+															: "",
+														// textShadow: this.state.Github ? "1.5px 1.5px gray" : ""
+													}}
+												>
+													{" "}
+													Github{" "}
+												</p>
 											</a>
 											<a
 												href="https://www.linkedin.com/in/miguel-diaz-a2114512a"
 												target="_blank"
 												className="navIcons"
 												rel="noopener noreferrer"
-												style={{ textDecoration: "none" }}
+												style={{
+													textDecoration: "none",
+													margin: "5px 0 0 10px",
+												}}
+												onMouseEnter={this.toggleLinkedIn}
+												onMouseLeave={this.toggleLinkedIn}
 											>
 												<img
 													src={Linkedin}
 													alt="LinkedIn Icon"
-													className="navIcons"
+													style={{
+														height: "2em",
+														transition: "ease 0.3s",
+														marginBottom: "10px",
+														transform: this.state.linkedIn
+															? "scale(1.5, 1.5)"
+															: "",
+													}}
 												/>
-												<p className="githubText"> Linkedin </p>
+												<p
+													style={{
+														fontSize: "20px",
+														display: "flex",
+														justifyContent: "center",
+														color: "black",
+														transition: "ease 0.3s",
+														transform: this.state.linkedIn
+															? "scale(1.1, 1.1)"
+															: "",
+														// textShadow: this.state.linkedIn ? "1.5px 1.5px gray" : ""
+													}}
+												>
+													{" "}
+													Linkedin{" "}
+												</p>
 											</a>
 										</div>
 									</div>
