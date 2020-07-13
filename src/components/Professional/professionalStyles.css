@@ -258,7 +258,7 @@ div.headerText {
 	position: relative;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 .skills {
@@ -274,7 +274,7 @@ div.headerText {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 35px 0 45px;
+	margin: 35px 35px 45px;
 	position: relative;
 }
 
@@ -598,6 +598,7 @@ div.socialSection {
 
 	.RowCenter {
 		flex-direction: column-reverse;
+		justify-content: space-around;
 	}
 }
 

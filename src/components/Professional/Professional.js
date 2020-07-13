@@ -14,6 +14,16 @@ import styled from "styled-components";
 import Lottie from "react-lottie";
 import Developer from "../assets/developer.json";
 
+import CSS3 from "../../icons/CSS3.png";
+import HTMLLogo from "../../icons/HTMLLogo.png";
+import JavascriptLogo from "../../icons/JS.png";
+import ReactLogo from "../../icons/React.png";
+import BataRang from "../../icons/batarang.png";
+import dj from "../../icons/dj.png";
+import NodeIcon from "../../icons/node.png";
+import Python from "../../icons/python.png";
+import adobeCreative from "../../icons/adobeCreative.png";
+
 const noUnderline = {
 	textDecoration: "none",
 	fontSize: "20px",
@@ -102,6 +112,11 @@ class Professional extends React.Component {
 						boxShadow: "0px 3px 15px gray",
 					}}
 				>
+					<Navbar.Brand
+						style={{ noUnderline, fontWeight: "500", fontSize: "19px" }}
+					>
+						MIGUEL DIAZ
+					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse
 						id="responsive-navbar-nav"
@@ -110,9 +125,6 @@ class Professional extends React.Component {
 						<Nav className="mr-auto" style={{ alignItems: "center" }}>
 							<Nav.Link href="#aboutMe" style={noUnderline}>
 								About Me
-							</Nav.Link>
-							<Nav.Link href="#skillsSection" style={noUnderline}>
-								Skills
 							</Nav.Link>
 							<Nav.Link href="#Projects" style={noUnderline}>
 								Projects
@@ -166,66 +178,63 @@ class Professional extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div className="RowCenter">
-					<ScrollableAnchor id={"skillsSection"}>
-						<div className="skillsContainer">
-							<h1>Skills</h1>
-							<div className={`${SkillsHeader}`}>
-								<Lottie options={defaultOptions} height={450} width={450} />
-								<button
-									className="skillsButton"
-									onClick={this.toggleSkill.bind(this)}
-								>
-									{" "}
-									Show Skills{" "}
-								</button>
-							</div>
-							<div className={`hiddenSkills ${showSkills}`}>
-								<div className="skills">
-									<img
-										src="images/HTMLLogo.png"
-										alt="HTML"
-										className="htmlLogo"
-									/>
-									<img src="../icons/CSS3.png" alt="CSS" className="CSS" />
-									<img src="images/React.png" alt="React" className="logos" />
-									<img src="images/Redux.png" alt="Redux" className="logos" />
-									<img
-										src="images/Javascript.png"
-										alt="Javascript"
-										className="logos"
-									/>
-									<img src="images/jQuery.png" alt="jQuery" className="logos" />
-									<img
-										src="images/githubIcon.png"
-										alt="Github"
-										className="logos"
-									/>
-									<img src="images/SQL.png" alt="SQL" className="logos" />
+
+				<ScrollableAnchor id={"aboutMe"}>
+					<div className="RowCenter">
+						<ScrollableAnchor id={"skillsSection"}>
+							<div className="skillsContainer">
+								<h1>Skills</h1>
+								<div className={`${SkillsHeader}`}>
+									<Lottie options={defaultOptions} height={450} width={450} />
+									<button
+										className="skillsButton"
+										onClick={this.toggleSkill.bind(this)}
+									>
+										{" "}
+										Show Skills{" "}
+									</button>
 								</div>
-								<div className="card">
-									<div className="card-header AdditionalSkillsHeader">
-										<h4> Additional Skills </h4>
+								<div className={`hiddenSkills ${showSkills}`}>
+									<div className="skills">
+										<img src={HTMLLogo} alt="HTML" className="logos" />
+										<img src={CSS3} alt="CSS" className="logos" />
+										<img src={ReactLogo} alt="React" className="logos" />
+										<img
+											src={JavascriptLogo}
+											alt="Javascript"
+											className="logos"
+										/>
+										<img src={dj} alt="Django" className="logos" />
+										<img src={Python} alt="Python" className="logos" />
+										<img src={NodeIcon} alt="Node" className="logos" />
+										<img
+											src={adobeCreative}
+											alt="Adobe Creative Suite"
+											className="logos"
+										/>
 									</div>
-									<div className="card-body ">
-										<blockquote className="blockquote mb-0 additionalSkillsContainer">
-											<ul className="skillsList">
-												<li>Express</li>
-												<li>Restful API's</li>
-												<li>UI Frameworks </li>
-											</ul>
-											<ul className="skillsList">
-												<li>CRUD Operations</li>
-												<li>Adobe Products</li>
-												<li>Agile/Scrum Environments</li>
-											</ul>
-										</blockquote>
+									<div className="card">
+										<div className="card-header AdditionalSkillsHeader">
+											<h4> Additional Skills </h4>
+										</div>
+										<div className="card-body ">
+											<blockquote className="blockquote mb-0 additionalSkillsContainer">
+												<ul className="skillsList">
+													<li>Express</li>
+													<li>Restful API's</li>
+													<li>UI Frameworks </li>
+												</ul>
+												<ul className="skillsList">
+													<li>CRUD Operations</li>
+													<li>Adobe Products</li>
+													<li>Agile/Scrum Environments</li>
+												</ul>
+											</blockquote>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</ScrollableAnchor>
-					<ScrollableAnchor id={"aboutMe"}>
+						</ScrollableAnchor>
 						<div className="aboutContainer">
 							<h2> About Me</h2>
 							<p>
@@ -246,8 +255,9 @@ class Professional extends React.Component {
 							Illustrator was used to create some custom icons.
 							<p />
 						</div>
-					</ScrollableAnchor>
-				</div>
+					</div>
+				</ScrollableAnchor>
+
 				<ScrollableAnchor id={"Projects"}>
 					<div className="projectsContainer" id="projectsSection">
 						<ProjectCarousel mode="proMode" />
