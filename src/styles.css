@@ -77,8 +77,8 @@ body {
 	visibility: hidden;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
+a.carousel-control-next,
+a.carousel-control-prev {
 	background-color: black;
 	height: 5%;
 	top: 40%;
