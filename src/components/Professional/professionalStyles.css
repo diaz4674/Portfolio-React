@@ -736,8 +736,9 @@ body {
   width: 200px;
 }
 
-.btn {
+.creativeBtn {
   border: none;
+  font-family: Bangers;
   font-size: inherit;
   color: inherit;
   background: none;
@@ -763,8 +764,18 @@ body {
   width: 200px;
 }
 
+.creativeBtn:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 200px;
+}
+
 .btn-5 {
-  color: #fff;
+  color: black;
   height: 70px;
   min-width: 220px;
   width: 200px;

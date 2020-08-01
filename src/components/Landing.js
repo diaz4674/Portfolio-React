@@ -20,7 +20,7 @@ const Vid1 = {
 
 class Landing extends Component {
   state = {
-    loading: true,
+    loading: false,
   };
 
   start = async () => {
