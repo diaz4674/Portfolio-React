@@ -828,7 +828,7 @@ body {
 .creativeText {
   width: 200px;
   display: flex;
-  font-family: bangers;
+  font-family: Bangers;
   justify-content: center;
   align-items: center;
   border-radius: 0.25rem;
