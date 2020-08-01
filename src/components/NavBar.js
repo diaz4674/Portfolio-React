@@ -91,7 +91,7 @@ class Topbar extends React.Component {
                 />
               </Icons>
               <button
-                className="btn btn-5 btn-5a icon-cog"
+                className="creativeBtn btn-5 btn-5a icon-cog"
                 onClick={this.toggleTheme.bind(this)}
               >
                 <span className="creativeText">Professional Mode</span>
