@@ -10,8 +10,7 @@ import Topbar from "./NavBar";
 import BottomNav from "./BottomNav";
 import ScrollAnimation from "react-animate-on-scroll";
 import Loading from "./Loading";
-import { connect } from "react-redux";
-import { toggleModes } from "./actions";
+
 // Header Video Style
 const Vid1 = {
   width: "100%",
@@ -20,7 +19,7 @@ const Vid1 = {
 
 class Landing extends Component {
   state = {
-    loading: false,
+    loading: true,
   };
 
   start = async () => {
@@ -138,6 +137,4 @@ const ProjectsDiv = styled.div`
   background: linear-gradient(to right bottom, #fffb9b 55%, #cdcdcd 45%);
 `;
 
-const mapStateToProps = (state) => ({ state });
-
-export default connect(mapStateToProps, { toggleModes })(Landing);
+export default Landing;

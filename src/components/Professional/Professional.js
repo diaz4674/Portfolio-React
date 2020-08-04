@@ -4,8 +4,6 @@ import Linkedin from "../../icons/linkedin.png";
 import BatmanLego from "../../images/BatmanLego.jpg";
 import Profile from "../../images/profile.jpg";
 import { withRouter } from "react-router-dom";
-import { toggleModes } from "../actions";
-import { connect } from "react-redux";
 import ProjectCarousel from "../Projects/Projects";
 import "./professionalStyles.css";
 import ScrollableAnchor from "react-scrollable-anchor";
@@ -428,8 +426,4 @@ const noUnderline = {
   fontSize: "20px",
 };
 
-const mapStateToProps = (state) => ({ state });
-
-export default withRouter(
-  connect(mapStateToProps, { toggleModes })(Professional)
-);
+export default withRouter(Professional);
