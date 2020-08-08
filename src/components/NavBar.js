@@ -48,11 +48,16 @@ class Topbar extends React.Component {
               <Nav.Link href="#About_me" style={noUnderline}>
                 About Me
               </Nav.Link>
-
               <Nav.Link href="#Projects" style={noUnderline}>
                 Projects
               </Nav.Link>
-
+              <Nav.Link
+                target="_blank"
+                href="https://resume.creddle.io/resume/fwgaoxyzydu"
+                style={noUnderline}
+              >
+                Resume
+              </Nav.Link>
               <Nav.Link href="#Contact" style={noUnderline}>
                 Contact
               </Nav.Link>
