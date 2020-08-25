@@ -15,6 +15,7 @@ class Projects extends React.Component {
 	async componentDidMount() {}
 
 	UNSAFE_componentWillReceiveProps(nextProps) {
+		// Checks to see what theme is set, to render the appropriate text theme
 		if (nextProps.mode === undefined) {
 			return null;
 		} else {
@@ -39,15 +40,15 @@ class Projects extends React.Component {
 	}
 
 	playVideo = (e) => {
-		// plays video when component mounts
+		// plays video when hovered
 		e.target.play();
 	};
 
-	// pauseVideo = (e) => {
-	// 	e.preventDefault();
-	// 	// Pauses video when component unmounts
-	// 	e.target.pause();
-	// };
+	pauseVideo = (e) => {
+		e.preventDefault();
+		// Pauses video when not hovered
+		e.target.pause();
+	};
 
 	render() {
 		let { font } = this.state;

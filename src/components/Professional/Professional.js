@@ -18,6 +18,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 class Professional extends React.Component {
 	state = {
+		// State toggles the scaling animation of logos, and visibility of skills
 		skills: false,
 		showSkills: "",
 		SkillsHeader: "SkillsHeader",
