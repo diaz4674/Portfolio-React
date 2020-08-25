@@ -15,57 +15,65 @@ import adobeCreative from "../../icons/adobeCreative.png";
 //Technology section
 class TechSection extends Component {
 	render() {
+		let currentTheme = "";
+		if (this.props.professionalView !== undefined) {
+			currentTheme = "professionalTheme";
+		}
 		return (
 			<>
 				<Container>
 					<TitleDiv>
-						<Title> Technologies </Title>
-						<BataRangIcon src={BataRang} />
+						{currentTheme === "" ? (
+							<>
+								<Title> Technologies </Title>
+								<BataRangIcon src={BataRang} />
+							</>
+						) : null}
 					</TitleDiv>
 					<TechDiv>
 						<LogoContainer>
 							<Img src={ReactLogo} alt="React" />
-							<Bar name="React" />
+							<Bar themeColor={currentTheme} name="React" />
 						</LogoContainer>
 						<LogoContainer>
 							{" "}
 							<Img src={JavasciptLogo} alt="JavaScript" />
-							<Bar name="JavaScript" />
+							<Bar themeColor={currentTheme} name="JavaScript" />
 						</LogoContainer>
 						<LogoContainer>
 							{" "}
 							<Img src={python} alt="" />
-							<Bar name="Python" />
+							<Bar themeColor={currentTheme} name="Python" />
 						</LogoContainer>
 						<LogoContainer>
 							{" "}
 							<Img src={dj} alt="" />
-							<Bar name="Django" />
+							<Bar themeColor={currentTheme} name="Django" />
 						</LogoContainer>
 						<LogoContainer>
 							{" "}
 							<Img src={NodeIcon} alt="" />
-							<Bar name="Node" />
+							<Bar themeColor={currentTheme} name="Node" />
 						</LogoContainer>
 						<LogoContainer>
 							{" "}
 							<Img src={HTMLLogo} alt="" />
-							<Bar name="HTML" />
+							<Bar themeColor={currentTheme} name="HTML" />
 						</LogoContainer>
 						<LogoContainer>
 							{" "}
 							<Img src={CSS3} alt="" />
-							<Bar name="CSS3" />
+							<Bar themeColor={currentTheme} name="CSS3" />
 						</LogoContainer>
 						<LogoContainer>
 							{" "}
 							<Img src={Git} alt="" />
-							<Bar name="GIT" />
+							<Bar themeColor={currentTheme} name="GIT" />
 						</LogoContainer>
 						<LogoContainer>
 							{" "}
 							<Img src={adobeCreative} alt="" />
-							<Bar name="Adobe Suite" />
+							<Bar themeColor={currentTheme} name="Adobe Suite" />
 						</LogoContainer>
 					</TechDiv>
 				</Container>
