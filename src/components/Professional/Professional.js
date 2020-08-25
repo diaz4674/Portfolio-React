@@ -12,14 +12,6 @@ import styled from "styled-components";
 import Lottie from "react-lottie";
 import Developer from "../assets/developer.json";
 import Tech from "../TechSection/Tech";
-import CSS3 from "../../icons/CSS3.png";
-import HTMLLogo from "../../icons/HTMLLogo.png";
-import JavascriptLogo from "../../icons/JS.png";
-import ReactLogo from "../../icons/React.png";
-import dj from "../../icons/dj.png";
-import NodeIcon from "../../icons/node.png";
-import Python from "../../icons/python.png";
-import adobeCreative from "../../icons/adobeCreative.png";
 import Us from "../../images/us4.0.png";
 
 import ScrollAnimation from "react-animate-on-scroll";
@@ -193,25 +185,6 @@ class Professional extends React.Component {
 										<div className="skills">
 											<Tech professionalView="professionalView" />
 										</div>
-										{/* <div className="card">
-										<div className="card-header AdditionalSkillsHeader">
-											<h4> Additional Skills </h4>
-										</div>
-										<div className="card-body ">
-											<blockquote className="blockquote mb-0 additionalSkillsContainer">
-												<ul className="skillsList">
-													<li>Express</li>
-													<li>Restful API's</li>
-													<li>UI Frameworks </li>
-												</ul>
-												<ul className="skillsList">
-													<li>CRUD Operations</li>
-													<li>Adobe Products</li>
-													<li>Agile/Scrum Environments</li>
-												</ul>
-											</blockquote>
-										</div>
-									</div> */}
 									</div>
 								</div>
 							</ScrollableAnchor>
@@ -390,13 +363,6 @@ const EndIcons = styled.div`
 
 const Icons = styled.a`
 	margin: 0 12px;
-`;
-
-const ColumnCenter = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 `;
 
 const noUnderline = {
