@@ -10,24 +10,12 @@ class Video1 extends React.Component {
 		video1Finished: false,
 		loading: true,
 	};
-	componentDidMount = () => {
-		// this.playVideo();
-	};
-
-	// componentWillUnmount = () => {
-	// 	this.pauseVideo();
-	// };
 
 	playVideo = () => {
 		// plays video when component mounts
 		this.refs.vidRef.play();
 	};
 
-	// pauseVideo = (e) => {
-	// 	e.preventDefault();
-	// 	// Pauses video when component unmounts
-	// 	this.refs.vidRef.pause();
-	// };
 	switchVideo = async () => {
 		//When First video ends, switches to second video which is capable
 		//of renerding a seamless continuous loop of the waves and flowing cape
@@ -42,7 +30,6 @@ class Video1 extends React.Component {
 			zIndex: this.state.video1Finished ? "0" : "2",
 			opacity: this.state.video1Finished ? "0" : "1",
 			width: "100%",
-			// transition: "ease .1s"
 		};
 
 		const Video2 = {
