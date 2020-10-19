@@ -53,7 +53,7 @@ class Topbar extends React.Component {
               </Nav.Link>
               <Nav.Link
                 target="_blank"
-                href="https://resume.creddle.io/resume/fwgaoxyzydu"
+                href="https://drive.google.com/file/d/1gTK9m9lFyDAv6c4eeZQnO1-o7MrGAAWz/view"
                 style={noUnderline}
               >
                 Resume
