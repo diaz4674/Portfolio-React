@@ -53,7 +53,7 @@ class Topbar extends React.Component {
               </Nav.Link>
                             <Nav.Link
                                 target="_blank"
-                                href="https://drive.google.com/file/d/1d-W3Gfh3jp8tk1Mdmj9BKaDhpMz4JPbG/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1nYNlzz6WBD3L9l_mtTxV-kK2C6ikdlXr/view?usp=sharing"
                                 style={noUnderline}
                             >
                                 Resume
