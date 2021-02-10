@@ -5,7 +5,7 @@ import Github from "../icons/Git.png"
 import LinkedIn from "../icons/linkedin.png"
 import { withRouter } from "react-router-dom"
 import "./Professional/professionalStyles.css"
-import ResumePDF from "../../resume.pdf"
+import ResumePDF from "../resume.pdf"
 
 // Styles
 const noUnderline = {
