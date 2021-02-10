@@ -6,17 +6,17 @@ import Resume from "./components/Resume"
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom"
 
 function App() {
-	return (
-		<Router>
-			<div className="App">
-				<Switch>
-					<Route exact path="/" component={Professional} />
-					<Route exact path="/creativeMode" component={Landing} />
-					<Route exact path="/resume" component={Resume} />
-				</Switch>
-			</div>
-		</Router>
-	)
+    return (
+        <Router>
+            <div className="App">
+                <Switch>
+                    <Route exact path="/professionalMode" component={Professional} />
+                    <Route exact path="/" component={Landing} />
+                    <Route exact path="/resume" component={Resume} />
+                </Switch>
+            </div>
+        </Router>
+    )
 }
 
 export default App
