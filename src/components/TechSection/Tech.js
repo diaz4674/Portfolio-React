@@ -5,6 +5,8 @@ import CSS3 from "../../icons/CSS3.png";
 import HTMLLogo from "../../icons/HTMLLogo.png";
 import JavasciptLogo from "../../icons/JS.png";
 import ReactLogo from "../../icons/React.png";
+import TypescriptLogo from "../../icons/TypescriptLogo.png";
+import AngularLogo from "../../icons/AngularLogo.png";
 import BataRang from "../../icons/batarang.png";
 import dj from "../../icons/dj.png";
 import NodeIcon from "../../icons/node.png";
@@ -34,6 +36,14 @@ class TechSection extends Component {
 						<LogoContainer>
 							<Img src={ReactLogo} alt="React" />
 							<Bar themeColor={currentTheme} name="React" />
+						</LogoContainer>
+						<LogoContainer>
+							<Img src={AngularLogo} alt="React" />
+							<Bar themeColor={currentTheme} name="Angular" />
+						</LogoContainer>
+						<LogoContainer>
+							<Img src={TypescriptLogo} alt="React" />
+							<Bar themeColor={currentTheme} name="Typescript" />
 						</LogoContainer>
 						<LogoContainer>
 							{" "}
