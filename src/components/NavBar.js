@@ -22,7 +22,7 @@ class Topbar extends React.Component {
 
 	toggleTheme(e) {
 		e.preventDefault()
-		this.props.history.push("/professionalMode")
+		this.props.history.push("/")
 	}
 
 	toggleGit = () => {
