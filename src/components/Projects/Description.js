@@ -46,6 +46,9 @@ class Desciption extends React.Component {
 					{" "}
 					{tech}
 				</Text>
+				<div style={{ color: 'rgb(102, 60, 0)', backgroundColor: 'rgb(255, 244, 229)', padding: '10px', margin: '10px', borderRadius:'4px' }}>
+				<span style={{fontWeight: 'bolder'}}>*</span> Due to Heroku's non-free backend hosting, the backend is down, but code is availaible in Github <span style={{fontWeight: 'bolder'}}>*</span>
+          </div>
 				<ButtonContainer>
 					<Live
 						href={link}
@@ -67,6 +70,8 @@ class Desciption extends React.Component {
 					>
 						Github Repo
 					</Live>
+
+
 				</ButtonContainer>
 			</Container>
 		);
