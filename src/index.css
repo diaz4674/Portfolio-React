@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-cream: #fff7ec;
+  --color-paper: #ffffff;
+  --color-ink: #1f1233;
+  --color-plum: #2a1645;
+  --color-night: #150b24;
+  --color-pink: #ff3d7f;
+  --color-violet: #7c3aed;
+  --color-cyan: #06c3d9;
+  --color-sun: #ffd166;
+  --color-mint: #3ddc97;
+}
+
+:root {
+  --bg: var(--color-cream);
+  --card: var(--color-paper);
+  --text: var(--color-ink);
+  --muted: #5b4a72;
+  --line: var(--color-ink);
+}
+.dark {
+  --bg: var(--color-night);
+  --card: #221338;
+  --text: #f7f0ff;
+  --muted: #c4b5dd;
+  --line: #f7f0ff;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sticker card: thick outline + offset shadow */
+.sticker {
+  background: var(--card);
+  border: 2.5px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 var(--line);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.sticker-hover:hover {
+  transform: translate(-2px, -2px) rotate(-0.4deg);
+  box-shadow: 9px 9px 0 var(--line);
+}
+
+.chip {
+  display: inline-flex; align-items: center; gap: .35rem;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  padding: .2rem .7rem;
+  font-weight: 700;
+  font-size: .8rem;
+  background: var(--card);
+}
+
+.muted { color: var(--muted); }
+
+@keyframes float { 0%,100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-8px) rotate(var(--r, 0deg)); } }
+.float { animation: float 5s ease-in-out infinite; }
+
+@keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+.live-dot { animation: pulse-dot 1.4s ease-in-out infinite; }
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee { animation: marquee 32s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .float, .live-dot, .marquee { animation: none; }
+  html { scroll-behavior: auto; }
+}
